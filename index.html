@@ -12,24 +12,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="css/loja.css">
 <script src="js/loja.js" defer></script>
-<script src="js/vida.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#principal">Ir ao conteúdo</a>
 
-<div class="announce" aria-label="Avisos">
-  <div class="announce-track">
-    <span>Curadoria de masculinos, femininos, unissex, árabes e nicho</span>
-    <span aria-hidden="true">✦</span>
-    <span>Atendimento direto para encontrar o seu perfume</span>
-    <span aria-hidden="true">✦</span>
-    <span>Ideias de presente para cada estilo</span>
-    <span aria-hidden="true">✦</span>
-  </div>
-</div>
+<div class="announce"><p>Masculinos, femininos e unissex · Importados e nacionais · Atendimento personalizado</p></div>
 
 <header class="header" id="topo">
-  <span class="progress" aria-hidden="true"></span>
   <button class="icon-btn menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
   </button>
@@ -59,87 +48,74 @@
 
 <main id="principal">
 
-  <!-- Banner principal em carrossel -->
-  <section class="hero" aria-roledescription="carrossel" aria-label="Destaques">
-    <div class="hero-slides">
-      <article class="slide is-current" data-theme="rose" aria-roledescription="slide" aria-label="1 de 3">
-        <div class="slide-copy">
-          <span class="eyebrow">Perfumaria para todos os estilos</span>
-          <h1>Presença<br><em>que fica.</em></h1>
-          <p>Masculinos, femininos e unissex escolhidos para marcar o seu dia e a sua noite.</p>
-          <a class="btn" href="#colecoes" data-tab-link="Masculino">Ver coleções</a>
+  <!-- Banner principal -->
+  <section class="editorial hero-ed" aria-labelledby="hero-title">
+    <div class="ed-bg" aria-hidden="true" style="--bg:url(../assets/fundos/marmore-arco.webp)"></div>
+    <div class="ed-shade shade-hero" aria-hidden="true"></div>
+    <div class="ed-inner">
+      <div class="ed-panel">
+        <span class="eyebrow">Perfumaria Maré de Essências</span>
+        <h1 id="hero-title">Fragrâncias que<br><em>marcam presença.</em></h1>
+        <p class="ed-lead">Os perfumes mais desejados do mundo e grandes criações nacionais, escolhidos um a um para você encontrar a sua assinatura.</p>
+        <div class="ed-actions">
+          <a class="btn btn-gold" href="#colecoes" data-tab-link="Masculino">Ver perfumes</a>
+          <a class="btn btn-ghost" href="#mare">Descobrir minha maré</a>
         </div>
-        <div class="slide-art" data-bottle="13" data-bottle-b="1"></div>
-      </article>
-      <article class="slide" data-theme="amber" aria-roledescription="slide" aria-label="2 de 3" aria-hidden="true">
-        <div class="slide-copy">
-          <span class="eyebrow">O encanto da perfumaria árabe</span>
-          <h2 class="slide-title">Âmbar, oud<br><em>e baunilha.</em></h2>
-          <p>Fragrâncias intensas, quentes e marcantes, para quem gosta de deixar rastro por onde passa.</p>
-          <a class="btn" href="#colecoes" data-tab-link="Árabe">Ver árabes</a>
-        </div>
-        <div class="slide-art" data-bottle="20" data-bottle-b="19"></div>
-      </article>
-      <article class="slide" data-theme="pearl" aria-roledescription="slide" aria-label="3 de 3" aria-hidden="true">
-        <div class="slide-copy">
-          <span class="eyebrow">Um jeito leve de escolher</span>
-          <h2 class="slide-title">Qual maré<br><em>é a sua?</em></h2>
-          <p>Arraste, veja o frasco mudar de cor e descubra a família de perfumes que combina com você.</p>
-          <a class="btn" href="#mare">Descobrir minha maré</a>
-        </div>
-        <div class="slide-art" data-bottle="14" data-bottle-b="28"></div>
-      </article>
-    </div>
-    <div class="hero-controls">
-      <button class="round-btn" data-hero="prev" aria-label="Destaque anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
-      <div class="hero-dots" role="tablist" aria-label="Escolher destaque">
-        <button role="tab" aria-selected="true" aria-label="Destaque 1"></button>
-        <button role="tab" aria-selected="false" aria-label="Destaque 2"></button>
-        <button role="tab" aria-selected="false" aria-label="Destaque 3"></button>
+        <ul class="ed-facts">
+          <li><b>Para todos</b><span>Masculinos, femininos e unissex</span></li>
+          <li><b>Curadoria</b><span>Importados, árabes e nacionais</span></li>
+          <li><b>Atendimento</b><span>Ajuda para escolher sem pressa</span></li>
+        </ul>
       </div>
-      <button class="round-btn" data-hero="next" aria-label="Próximo destaque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+      <figure class="ed-frame" data-frame="13" data-eager="1"></figure>
     </div>
   </section>
 
-  <!-- Faixa de marcas -->
+  <!-- Marcas -->
   <div class="brands" role="region" aria-label="Algumas marcas da curadoria">
-    <div class="brands-track"><div class="brands-row"><span>Dior</span><i>✦</i><span>Chanel</span><i>✦</i><span>Lattafa</span><i>✦</i><span>Tom Ford</span><i>✦</i><span>Carolina Herrera</span><i>✦</i><span>Paco Rabanne</span><i>✦</i><span>Creed</span><i>✦</i><span>Maison Francis Kurkdjian</span><i>✦</i><span>Versace</span><i>✦</i><span>Yves Saint Laurent</span><i>✦</i><span>Armaf</span><i>✦</i><span>Jo Malone London</span><i>✦</i><span>Al Haramain</span><i>✦</i><span>Xerjoff</span><i>✦</i><span>Lancôme</span><i>✦</i><span>Giorgio Armani</span><i>✦</i></div><div class="brands-row" aria-hidden="true"><span>Dior</span><i>✦</i><span>Chanel</span><i>✦</i><span>Lattafa</span><i>✦</i><span>Tom Ford</span><i>✦</i><span>Carolina Herrera</span><i>✦</i><span>Paco Rabanne</span><i>✦</i><span>Creed</span><i>✦</i><span>Maison Francis Kurkdjian</span><i>✦</i><span>Versace</span><i>✦</i><span>Yves Saint Laurent</span><i>✦</i><span>Armaf</span><i>✦</i><span>Jo Malone London</span><i>✦</i><span>Al Haramain</span><i>✦</i><span>Xerjoff</span><i>✦</i><span>Lancôme</span><i>✦</i><span>Giorgio Armani</span><i>✦</i></div></div>
+    <span class="brands-label">Marcas da curadoria</span>
+    <ul class="brands-list"><li>Dior</li><li>Chanel</li><li>Lancôme</li><li>Paco Rabanne</li><li>Carolina Herrera</li><li>Givenchy</li><li>Lattafa</li><li>Natura</li><li>O Boticário</li><li>Eudora</li></ul>
   </div>
 
   <!-- Famílias olfativas -->
   <section class="section families" aria-labelledby="fam-title">
     <header class="section-head reveal">
-      <span class="eyebrow">Explore por família</span>
-      <h2 id="fam-title">Qual cheiro <em>tem a sua cara?</em></h2>
+      <span class="eyebrow">Famílias olfativas</span>
+      <h2 id="fam-title">Comece pelo que <em>você gosta de sentir.</em></h2>
+      <p>Todo perfume pertence a uma família. Escolha a sua e veja as fragrâncias que combinam com ela.</p>
     </header>
-    <div class="family-grid">
-      <a class="family reveal" href="#catalogo" data-family-link="Fresco" style="--d:0s">
-        <span class="family-arch fam-fresco" aria-hidden="true">
-          <svg viewBox="0 0 200 260"><g class="spin-slow"><circle cx="100" cy="150" r="56" class="f-fill-a"/><circle cx="100" cy="150" r="46" class="f-fill-b"/><g class="f-line"><path d="M100 104v92M54 150h92M67 117l66 66M133 117l-66 66"/></g></g><circle cx="152" cy="74" r="22" class="f-fill-c"/><path class="f-leaf" d="M40 80c18-26 46-28 58-20-10 20-36 32-58 20Z"/></svg>
+    <div class="fam-cards">
+      <a class="fam-card reveal" href="#catalogo" data-family-link="Fresco" style="--d:0.0s">
+        <img src="assets/fundos/limao-descascado.webp" alt="" loading="lazy" decoding="async" style="object-position:60% 50%">
+        <span class="fam-card-body">
+          <span class="family-name">Frescos</span>
+          <span class="family-notes">Cítricos, aquáticos e verdes. Leves, limpos e perfeitos para o dia.</span>
+          <span class="fam-go">Ver frescos →</span>
         </span>
-        <span class="family-name">Frescos</span>
-        <span class="family-notes">Cítricos, marinhos e verdes</span>
       </a>
-      <a class="family reveal" href="#catalogo" data-family-link="Floral" style="--d:.08s">
-        <span class="family-arch fam-floral" aria-hidden="true">
-          <svg viewBox="0 0 200 260"><g class="sway"><g transform="translate(100 140)"><ellipse rx="22" ry="44" class="f-fill-a" transform="rotate(0) translate(0 -38)"/><ellipse rx="22" ry="44" class="f-fill-a" transform="rotate(72) translate(0 -38)"/><ellipse rx="22" ry="44" class="f-fill-a" transform="rotate(144) translate(0 -38)"/><ellipse rx="22" ry="44" class="f-fill-a" transform="rotate(216) translate(0 -38)"/><ellipse rx="22" ry="44" class="f-fill-a" transform="rotate(288) translate(0 -38)"/><circle r="16" class="f-fill-c"/></g></g><path class="f-leaf" d="M40 228c20-30 44-34 60-26-12 22-40 34-60 26Z"/></svg>
+      <a class="fam-card reveal" href="#catalogo" data-family-link="Floral" style="--d:0.06s">
+        <img src="assets/fundos/flor-copo-de-leite.webp" alt="" loading="lazy" decoding="async" style="object-position:68% 40%">
+        <span class="fam-card-body">
+          <span class="family-name">Florais</span>
+          <span class="family-notes">Rosa, jasmim e flor de laranjeira. Elegantes e cheios de presença.</span>
+          <span class="fam-go">Ver florais →</span>
         </span>
-        <span class="family-name">Florais</span>
-        <span class="family-notes">Rosa, jasmim e flor de laranjeira</span>
       </a>
-      <a class="family reveal" href="#catalogo" data-family-link="Amadeirado" style="--d:.16s">
-        <span class="family-arch fam-madeira" aria-hidden="true">
-          <svg viewBox="0 0 200 260"><g class="f-line breathe"><circle cx="100" cy="150" r="70"/><circle cx="104" cy="148" r="54"/><circle cx="98" cy="152" r="38"/><circle cx="102" cy="149" r="22"/><circle cx="100" cy="150" r="8"/></g><path class="f-leaf" d="M140 66c16-22 38-22 46-14-10 16-30 24-46 14Z"/></svg>
+      <a class="fam-card reveal" href="#catalogo" data-family-link="Amadeirado" style="--d:0.12s">
+        <img src="assets/fundos/marmore-arco.webp" alt="" loading="lazy" decoding="async" style="object-position:85% 60%">
+        <span class="fam-card-body">
+          <span class="family-name">Amadeirados</span>
+          <span class="family-notes">Cedro, sândalo e vetiver. Sóbrios, seguros e marcantes.</span>
+          <span class="fam-go">Ver amadeirados →</span>
         </span>
-        <span class="family-name">Amadeirados</span>
-        <span class="family-notes">Cedro, sândalo e vetiver</span>
       </a>
-      <a class="family reveal" href="#catalogo" data-family-link="Oriental" style="--d:.24s">
-        <span class="family-arch fam-oriental" aria-hidden="true">
-          <svg viewBox="0 0 200 260"><g class="spin-slow"><path class="f-fill-a" d="M100 82l13 40 42 0-34 25 13 40-34-25-34 25 13-40-34-25 42 0Z" transform="translate(0 20)"/></g><circle cx="58" cy="210" r="14" class="f-fill-c"/><circle cx="148" cy="214" r="9" class="f-fill-c"/><path class="f-line" d="M40 70q30-20 60 0t60 0"/></svg>
+      <a class="fam-card reveal" href="#catalogo" data-family-link="Oriental" style="--d:0.18s">
+        <img src="assets/fundos/ambar.webp" alt="" loading="lazy" decoding="async" style="object-position:78% 50%">
+        <span class="fam-card-body">
+          <span class="family-name">Orientais</span>
+          <span class="family-notes">Âmbar, baunilha e especiarias. Quentes, intensos e envolventes.</span>
+          <span class="fam-go">Ver orientais →</span>
         </span>
-        <span class="family-name">Orientais</span>
-        <span class="family-notes">Âmbar, baunilha e especiarias</span>
       </a>
     </div>
   </section>
@@ -149,7 +125,7 @@
     <header class="section-head reveal">
       <span class="eyebrow">Sucesso em todo lugar</span>
       <h2 id="loved-title">Os mais <em>amados</em></h2>
-      <p>Clássicos que conquistaram o Brasil e o mundo, reunidos em um só lugar.</p>
+      <p>Clássicos que conquistaram o mundo e seguem entre os preferidos de quem ama perfume.</p>
     </header>
     <div class="rail-wrap">
       <button class="round-btn rail-btn prev" data-rail="loved-rail" data-dir="-1" aria-label="Ver anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
@@ -169,7 +145,8 @@
   </section>
 
   <!-- Momento interativo -->
-  <section class="tide" id="mare" aria-labelledby="tide-title">
+  <section class="tide editorial-light" id="mare" aria-labelledby="tide-title">
+    <div class="ed-bg" aria-hidden="true" style="--bg:url(../assets/fundos/plano-japa.webp)"></div><div class="ed-shade shade-tide" aria-hidden="true"></div>
     <div class="tide-bg" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="tide-copy reveal">
       <span class="eyebrow">Um gesto, uma maré</span>
@@ -296,9 +273,10 @@
   </section>
 
   <!-- Nossa história -->
-  <section class="story" aria-labelledby="story-title">
+  <section class="story editorial" aria-labelledby="story-title">
+    <div class="ed-bg" aria-hidden="true" style="--bg:url(../assets/fundos/banho-ambar.webp)"></div><div class="ed-shade shade-story" aria-hidden="true"></div>
     <div class="story-art reveal" aria-hidden="true">
-      <div class="story-arch"><div class="story-bottle" data-bottle="27"></div></div>
+      <figure class="ed-frame" data-frame="45"></figure>
       <svg class="story-ring" viewBox="0 0 200 200"><defs><path id="ring" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1-160 0"/></defs><text><textPath href="#ring">PERFUME É MEMÓRIA QUE A GENTE VESTE ✦ PERFUME É MEMÓRIA QUE A GENTE VESTE ✦</textPath></text></svg>
     </div>
     <div class="story-copy reveal">
@@ -311,11 +289,12 @@
   </section>
 
   <!-- Chamada final -->
-  <section class="final" aria-labelledby="final-title">
-    <div class="final-inner reveal">
+  <section class="final editorial" aria-labelledby="final-title">
+    <div class="ed-bg" aria-hidden="true" style="--bg:url(../assets/fundos/praia-quente.webp)"></div><div class="ed-shade shade-final" aria-hidden="true"></div>
+    <div class="final-inner ed-panel reveal">
       <span class="eyebrow">Ficou em dúvida?</span>
       <h2 id="final-title">Guarde seus favoritos<br><em>e escolha com calma.</em></h2>
-      <p>Toque no coração dos perfumes que chamaram sua atenção. Sua seleção fica guardada aqui enquanto você navega.</p>
+      <p>Toque no coração dos perfumes que chamaram sua atenção. Eles ficam reunidos na sua seleção enquanto você navega.</p>
       <button class="btn btn-light" id="final-bag">Ver minha seleção</button>
     </div>
   </section>

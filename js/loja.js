@@ -29,7 +29,7 @@
     P(10, 'Baccarat Rouge 540', 'Maison Francis Kurkdjian', 'Nicho', 'Amadeirado', 'Jasmim · Açafrão · Âmbar · Cedro', 'facet', '#e9a08f', '#c9a26b'),
     P(11, 'Light Blue', 'Dolce&Gabbana', 'Feminino', 'Fresco', 'Limão-siciliano · Maçã · Cedro', 'tall', '#bfe0ee', '#dfe6ec'),
     P(12, 'Bloom', 'Gucci', 'Feminino', 'Floral', 'Tuberosa · Jasmim', 'classic', '#f2c6c9', '#e7b9bd'),
-    P(13, 'Sauvage', 'Dior', 'Masculino', 'Fresco', 'Bergamota · Pimenta · Ambroxan', 'classic', '#7393b5', '#3b4656'),
+    P(13, 'Sauvage Eau de Parfum', 'Dior', 'Masculino', 'Fresco', 'Bergamota · Lavanda · Baunilha', 'classic', '#7393b5', '#3b4656'),
     P(14, 'Bleu de Chanel', 'Chanel', 'Masculino', 'Amadeirado', 'Cítricos · Incenso · Cedro', 'square', '#41608c', '#2f3440'),
     P(15, '1 Million', 'Paco Rabanne', 'Masculino', 'Oriental', 'Tangerina · Canela · Couro', 'square', '#e2c06d', '#c9a26b'),
     P(16, 'Le Male Elixir', 'Jean Paul Gaultier', 'Masculino', 'Oriental', 'Lavanda · Fava tonka · Mel', 'tall', '#e3b86a', '#c9a26b'),
@@ -49,11 +49,86 @@
     P(30, 'Eros', 'Versace', 'Masculino', 'Oriental', 'Hortelã · Maçã verde · Baunilha', 'classic', '#4fa3a5', '#c9a26b'),
     P(31, 'Invictus', 'Paco Rabanne', 'Masculino', 'Fresco', 'Toranja · Notas marinhas · Louro', 'facet', '#c9d6de', '#c0c4c9'),
     P(32, '212 VIP Men', 'Carolina Herrera', 'Masculino', 'Oriental', 'Gengibre · Especiarias · Âmbar', 'tall', '#5a5e66', '#c0c4c9'),
-    P(33, 'Y', 'Yves Saint Laurent', 'Masculino', 'Fresco', 'Maçã · Sálvia · Fava tonka', 'tall', '#9fb7d0', '#2f3440')
+    P(33, 'Y', 'Yves Saint Laurent', 'Masculino', 'Fresco', 'Maçã · Sálvia · Fava tonka', 'tall', '#9fb7d0', '#2f3440'),
+
+    /* Perfumes das fotos enviadas pela loja. Notas e famílias das marcas nacionais a confirmar. */
+    P(34, 'Phantom', 'Paco Rabanne', 'Masculino', 'Fresco', 'Lavanda · Limão · Baunilha', 'square', '#2b2b2f', '#1c1c1f'),
+    P(35, 'Scandal', 'Jean Paul Gaultier', 'Feminino', 'Oriental', 'Mel · Gardênia · Patchouli', 'round', '#ef9a94', '#d9d4cc'),
+    P(36, 'Sì', 'Giorgio Armani', 'Feminino', 'Floral', 'Cassis · Rosa · Baunilha', 'classic', '#f2c9a8', '#1c1c1f'),
+    P(37, 'Paradoxe', 'Prada', 'Feminino', 'Floral', 'Néroli · Âmbar · Almíscar', 'facet', '#f4b8ad', '#1c1c1f'),
+    P(38, 'Homem Sagaz', 'Natura', 'Masculino', 'Amadeirado', 'Notas em breve', 'classic', '#6e0f1c', '#8a8d92'),
+    P(39, 'Bright Crystal', 'Versace', 'Feminino', 'Floral', 'Romã · Peônia · Almíscar', 'square', '#f3b6cd', '#e9eef2'),
+    P(40, 'Botica 214 Verano en Firenze', 'O Boticário', 'Unissex', 'Fresco', 'Notas em breve', 'classic', '#1e1e20', '#1c1c1f'),
+    P(41, 'Alien', 'Mugler', 'Feminino', 'Amadeirado', 'Jasmim · Madeiras · Âmbar', 'facet', '#6a1b9a', '#c9a26b'),
+    P(42, 'For Her Eau de Parfum', 'Narciso Rodriguez', 'Feminino', 'Floral', 'Rosa · Pêssego · Almíscar', 'square', '#f2cfd0', '#f2cfd0'),
+    P(43, 'Club 6 Intenso', 'Eudora', 'Masculino', 'Amadeirado', 'Notas em breve', 'classic', '#2a2a2a', '#c0c4c9'),
+    P(44, 'Homem Cor.agio', 'Natura', 'Masculino', 'Amadeirado', 'Notas em breve', 'square', '#4a4a4e', '#1c1c1f'),
+    P(45, 'Invictus Victory', 'Paco Rabanne', 'Masculino', 'Oriental', 'Lavanda · Baunilha · Âmbar', 'round', '#1c1c1f', '#1c1c1f'),
+    P(46, 'Impression In Black', 'Eudora', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#1e1e20', '#1c1c1f'),
+    P(47, "L'Interdit", 'Givenchy', 'Feminino', 'Floral', 'Flor de laranjeira · Jasmim · Patchouli', 'round', '#f3c9a8', '#1c1c1f'),
+    P(48, 'Club 6 Exclusive', 'Eudora', 'Masculino', 'Oriental', 'Notas em breve', 'classic', '#a8741e', '#c9a26b'),
+    P(49, 'Malbec Magnetic', 'O Boticário', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#c0c4c9', '#1c1c1f'),
+    P(50, 'Clash', 'O Boticário', 'Masculino', 'Fresco', 'Notas em breve', 'tall', '#8fc3d6', '#c0c4c9'),
+    P(51, 'The Blend', 'O Boticário', 'Masculino', 'Amadeirado', 'Notas em breve', 'square', '#3a2a1e', '#a8743c'),
+    P(52, 'Attar Al Wesal', 'Al Wataniah', 'Árabe', 'Oriental', 'Notas em breve', 'square', '#1c1c1f', '#c0c4c9'),
+    P(53, 'Hawas for Him', 'Rasasi', 'Árabe', 'Fresco', 'Maçã · Bergamota · Âmbar', 'round', '#8f86c9', '#8a8d92'),
+    P(54, 'Select', 'Mercedes-Benz', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#e9eef2', '#1c1c1f'),
+    P(55, 'Individuel', 'Montblanc', 'Masculino', 'Oriental', 'Notas em breve', 'classic', '#b8c4cc', '#8a8d92'),
+    P(56, 'Starwalker', 'Montblanc', 'Masculino', 'Fresco', 'Notas em breve', 'tall', '#eef1f2', '#8a8d92'),
+    P(57, 'Voyage', 'Nautica', 'Masculino', 'Fresco', 'Maçã verde · Notas aquáticas · Almíscar', 'round', '#8fc3e6', '#c0c4c9'),
+    P(58, 'Homme Sport', 'Stella Dustin', 'Masculino', 'Fresco', 'Notas em breve', 'tall', '#e8d9a8', '#8a8d92')
   ];
+
+  /* Fotos reais: id -> [arquivo, cor do fundo da foto]. */
+  const fotos = {
+    1: ['la-vie-est-belle.webp', '#f7f1ec'],
+    2: ['good-girl.webp', '#faf5ef'],
+    3: ['jadore.webp', '#f5eee8'],
+    4: ['coco-mademoiselle.webp', '#f5efea'],
+    5: ['libre.webp', '#f6efe9'],
+    11: ['light-blue.webp', '#f7f3ee'],
+    12: ['gucci-bloom.webp', '#faf5ef'],
+    13: ['sauvage-edp.webp', '#e2dcd5'],
+    34: ['phantom.webp', '#e7e0d8'],
+    35: ['scandal.webp', '#f4eee8'],
+    36: ['si.webp', '#f6f1e9'],
+    39: ['bright-crystal.webp', '#faf5ef'],
+    40: ['botica-214-verano.webp', '#e1ddda'],
+    41: ['alien.webp', '#f8f1eb'],
+    42: ['for-her.webp', '#f7f3f0'],
+    43: ['club-6-intenso.webp', '#dcd5d0'],
+    44: ['homem-coragio.webp', '#e0dbd5'],
+    45: ['invictus-victory.webp', '#d9d2cc'],
+    46: ['impression-in-black.webp', '#e0dcd3'],
+    47: ['linterdit.webp', '#f6f0ea'],
+    48: ['club-6-exclusive.webp', '#ded7d1'],
+    49: ['malbec-magnetic.webp', '#e9e6e1'],
+    20: ['asad.webp', '#ddd5d0'],
+    50: ['clash.webp', '#dcd6ce'],
+    51: ['the-blend.webp', '#e2dcd6'],
+    37: ['paradoxe.webp', '#f5efeb'],
+    38: ['homem-sagaz.webp', '#eae7e2'],
+    52: ['attar-al-wesal.webp', '#f8f8f8'],
+    53: ['hawas-for-him.webp', '#f8f8f8'],
+    54: ['mercedes-benz-select.webp', '#f8f8f8'],
+    55: ['montblanc-individuel.webp', '#f8f8f8'],
+    56: ['montblanc-starwalker.webp', '#ffffff'],
+    57: ['nautica-voyage.webp', '#f8f8f8'],
+    58: ['stella-dustin-homme-sport.webp', '#f8f8f8']
+  };
+  Object.entries(fotos).forEach(([id, [arq, fundo]]) => {
+    const p = produtos.find((x) => x.id === Number(id));
+    if (p) { p.foto = 'assets/produtos/' + arq; p.fundo = fundo; }
+  });
+  /* Fotos mais altas que o quadro: mostradas inteiras, sem corte. */
+  [20, 34, 46, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58].forEach((id) => { const p = produtos.find((x) => x.id === id); if (p) p.alta = true; });
+  /* Fotos quadradas com muito espaço em volta: aproximadas para o frasco ficar em destaque. */
+  [52, 53, 54, 56, 57].forEach((id) => { const p = produtos.find((x) => x.id === id); if (p) p.zoom = true; });
+  /* Produtos com foto aparecem primeiro nas listas. */
+  const comFotoPrimeiro = (a, b) => (b.foto ? 1 : 0) - (a.foto ? 1 : 0);
   const byId = (id) => produtos.find((p) => p.id === Number(id));
-  const maisAmados = [13, 1, 14, 19, 10, 30, 2, 27, 15, 7];
-  const top5 = [13, 10, 19, 1, 27];
+  const maisAmados = [13, 1, 45, 2, 4, 34, 3, 47, 43, 41];
+  const top5 = [13, 1, 45, 4, 2];
 
   /* ---------- Cores ---------- */
   const hex = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
@@ -96,8 +171,9 @@
   }
 
   const media = (p) => p.foto
-    ? `<img src="${p.foto}" alt="Frasco de ${p.nome}, ${p.marca}" loading="lazy" decoding="async">`
+    ? `<span class="photo-fill" aria-hidden="true" style="background-image:url(${p.foto})"></span><img class="photo${p.alta ? ' fit' : ''}${p.zoom ? ' zoom' : ''}" src="${p.foto}" alt="Frasco de ${p.nome}, ${p.marca}" loading="lazy" decoding="async">`
     : bottleSVG(p);
+  const mediaStyle = (p) => p.foto ? ` has-photo" style="--photo-bg:${p.fundo}` : '';
 
   /* ---------- Seleção (favoritos) ---------- */
   const selected = new Set();
@@ -106,7 +182,7 @@
   function card(p) {
     const on = selected.has(p.id);
     return `<article class="product" data-family="${p.familia}" style="--tint:${mix(p.liquido, '#fbf6f1', .72)}">
-      <div class="product-media"><span class="mist" aria-hidden="true"><i></i><i></i><i></i></span>${media(p)}
+      <div class="product-media${mediaStyle(p)}"><span class="mist" aria-hidden="true"><i></i><i></i><i></i></span>${media(p)}
         <span class="chip">${p.familia}</span>
         <button class="fav" data-fav="${p.id}" aria-pressed="${on}" aria-label="${on ? 'Tirar' : 'Guardar'} ${p.nome} ${on ? 'da' : 'na'} seleção">${heart}</button>
       </div>
@@ -142,36 +218,13 @@
     syncFavs();
   });
 
-  /* ---------- Banner em carrossel ---------- */
-  $$('.slide-art').forEach((el) => {
-    const a = byId(el.dataset.bottle), b = byId(el.dataset.bottleB);
-    el.innerHTML = `<span class="halo"></span><span class="silk silk-a"></span><span class="silk silk-b"></span>
-      <span class="pedestal"></span>
-      <div class="hero-bottle back">${bottleSVG(b)}</div>
-      <div class="hero-bottle front">${bottleSVG(a)}</div>
-      <span class="sparkle" style="--x:18%;--y:24%"></span><span class="sparkle" style="--x:82%;--y:18%;--dl:-1.2s"></span><span class="sparkle" style="--x:74%;--y:70%;--dl:-2.4s"></span>
-      <span class="hero-caption">${a.nome} <i>·</i> ${a.marca}</span>`;
+  /* ---------- Molduras com foto de produto (banner e seções editoriais) ---------- */
+  $$('[data-frame]').forEach((el) => {
+    const p = byId(el.dataset.frame);
+    if (!p || !p.foto) return;
+    el.innerHTML = `<img src="${p.foto}" alt="Frasco de ${p.nome}, ${p.marca}" decoding="async"${el.dataset.eager ? '' : ' loading="lazy"'}>
+      <figcaption><span class="brand">${p.marca}</span><b>${p.nome}</b></figcaption>`;
   });
-
-  const slides = $$('.slide'), dots = $$('.hero-dots button');
-  let current = 0, timer = null;
-  function go(i) {
-    current = (i + slides.length) % slides.length;
-    slides.forEach((s, k) => { s.classList.toggle('is-current', k === current); s.setAttribute('aria-hidden', k !== current); s.inert = k !== current; });
-    dots.forEach((d, k) => d.setAttribute('aria-selected', k === current));
-    document.querySelector('.hero').dataset.theme = slides[current].dataset.theme;
-  }
-  function auto() { stopAuto(); if (!reduceMotion.matches) timer = setInterval(() => go(current + 1), 6500); }
-  function stopAuto() { clearInterval(timer); }
-  $('[data-hero="prev"]').addEventListener('click', () => { go(current - 1); auto(); });
-  $('[data-hero="next"]').addEventListener('click', () => { go(current + 1); auto(); });
-  dots.forEach((d, k) => d.addEventListener('click', () => { go(k); auto(); }));
-  const hero = $('.hero');
-  hero.addEventListener('mouseenter', stopAuto);
-  hero.addEventListener('mouseleave', auto);
-  hero.addEventListener('focusin', stopAuto);
-  hero.addEventListener('focusout', auto);
-  go(0); auto();
 
   /* ---------- Os mais amados ---------- */
   $('#loved-rail').innerHTML = maisAmados.map((id) => card(byId(id))).join('');
@@ -185,7 +238,7 @@
     const p = byId(id);
     return `<li class="top-card reveal" style="--d:${i * 0.07}s;--tint:${mix(p.liquido, '#fbf6f1', .7)}">
       <span class="top-num" aria-hidden="true">${i + 1}</span>
-      <div class="top-media">${media(p)}</div>
+      <div class="top-media${mediaStyle(p)}">${media(p)}</div>
       <span class="brand">${p.marca}</span>
       <h3>${p.nome}</h3>
       <button class="link-btn" data-fav="${p.id}" aria-pressed="${selected.has(p.id)}" aria-label="Guardar ${p.nome} na seleção">${heart} Guardar</button>
@@ -200,7 +253,7 @@
       t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
       if (on) { panel.setAttribute('aria-labelledby', t.id); if (focus) t.focus(); }
     });
-    const list = produtos.filter((p) => p.cat === cat).slice(0, 8);
+    const list = produtos.filter((p) => p.cat === cat).sort(comFotoPrimeiro).slice(0, 8);
     panel.classList.remove('swap'); void panel.offsetWidth; panel.classList.add('swap');
     panel.innerHTML = list.map(card).join('');
   }
@@ -222,7 +275,7 @@
     const list = produtos.filter((p) =>
       (!q || `${p.nome} ${p.marca} ${p.notas}`.toLowerCase().includes(q)) &&
       (!famSel.value || p.familia === famSel.value) &&
-      (!catSel.value || p.cat === catSel.value));
+      (!catSel.value || p.cat === catSel.value)).sort(comFotoPrimeiro);
     $('#result-count').textContent = `${list.length} perfume${list.length === 1 ? '' : 's'}`;
     $('#products').innerHTML = list.length ? list.map(card).join('') : '<p class="empty">Nenhum perfume encontrado. Tente outra busca ou outro filtro.</p>';
   }
