@@ -69,7 +69,14 @@
     P(48, 'Club 6 Exclusive', 'Eudora', 'Masculino', 'Oriental', 'Notas em breve', 'classic', '#a8741e', '#c9a26b'),
     P(49, 'Malbec Magnetic', 'O Boticário', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#c0c4c9', '#1c1c1f'),
     P(50, 'Clash', 'O Boticário', 'Masculino', 'Fresco', 'Notas em breve', 'tall', '#8fc3d6', '#c0c4c9'),
-    P(51, 'The Blend', 'O Boticário', 'Masculino', 'Amadeirado', 'Notas em breve', 'square', '#3a2a1e', '#a8743c')
+    P(51, 'The Blend', 'O Boticário', 'Masculino', 'Amadeirado', 'Notas em breve', 'square', '#3a2a1e', '#a8743c'),
+    P(52, 'Attar Al Wesal', 'Al Wataniah', 'Árabe', 'Oriental', 'Notas em breve', 'square', '#1c1c1f', '#c0c4c9'),
+    P(53, 'Hawas for Him', 'Rasasi', 'Árabe', 'Fresco', 'Maçã · Bergamota · Âmbar', 'round', '#8f86c9', '#8a8d92'),
+    P(54, 'Select', 'Mercedes-Benz', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#e9eef2', '#1c1c1f'),
+    P(55, 'Individuel', 'Montblanc', 'Masculino', 'Oriental', 'Notas em breve', 'classic', '#b8c4cc', '#8a8d92'),
+    P(56, 'Starwalker', 'Montblanc', 'Masculino', 'Fresco', 'Notas em breve', 'tall', '#eef1f2', '#8a8d92'),
+    P(57, 'Voyage', 'Nautica', 'Masculino', 'Fresco', 'Maçã verde · Notas aquáticas · Almíscar', 'round', '#8fc3e6', '#c0c4c9'),
+    P(58, 'Homme Sport', 'Stella Dustin', 'Masculino', 'Fresco', 'Notas em breve', 'tall', '#e8d9a8', '#8a8d92')
   ];
 
   /* Fotos reais: id -> [arquivo, cor do fundo da foto]. */
@@ -98,14 +105,25 @@
     49: ['malbec-magnetic.webp', '#e9e6e1'],
     20: ['asad.webp', '#ddd5d0'],
     50: ['clash.webp', '#dcd6ce'],
-    51: ['the-blend.webp', '#e2ddd5']
+    51: ['the-blend.webp', '#e2dcd6'],
+    37: ['paradoxe.webp', '#f5efeb'],
+    38: ['homem-sagaz.webp', '#eae7e2'],
+    52: ['attar-al-wesal.webp', '#f8f8f8'],
+    53: ['hawas-for-him.webp', '#f8f8f8'],
+    54: ['mercedes-benz-select.webp', '#f8f8f8'],
+    55: ['montblanc-individuel.webp', '#f8f8f8'],
+    56: ['montblanc-starwalker.webp', '#ffffff'],
+    57: ['nautica-voyage.webp', '#f8f8f8'],
+    58: ['stella-dustin-homme-sport.webp', '#f8f8f8']
   };
   Object.entries(fotos).forEach(([id, [arq, fundo]]) => {
     const p = produtos.find((x) => x.id === Number(id));
     if (p) { p.foto = 'assets/produtos/' + arq; p.fundo = fundo; }
   });
   /* Fotos mais altas que o quadro: mostradas inteiras, sem corte. */
-  [20, 34, 46, 49, 50, 51].forEach((id) => { const p = produtos.find((x) => x.id === id); if (p) p.alta = true; });
+  [20, 34, 46, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58].forEach((id) => { const p = produtos.find((x) => x.id === id); if (p) p.alta = true; });
+  /* Fotos quadradas com muito espaço em volta: aproximadas para o frasco ficar em destaque. */
+  [52, 53, 54, 56, 57].forEach((id) => { const p = produtos.find((x) => x.id === id); if (p) p.zoom = true; });
   /* Produtos com foto aparecem primeiro nas listas. */
   const comFotoPrimeiro = (a, b) => (b.foto ? 1 : 0) - (a.foto ? 1 : 0);
   const byId = (id) => produtos.find((p) => p.id === Number(id));
@@ -153,7 +171,7 @@
   }
 
   const media = (p) => p.foto
-    ? `<span class="photo-fill" aria-hidden="true" style="background-image:url(${p.foto})"></span><img class="photo${p.alta ? ' fit' : ''}" src="${p.foto}" alt="Frasco de ${p.nome}, ${p.marca}" loading="lazy" decoding="async">`
+    ? `<span class="photo-fill" aria-hidden="true" style="background-image:url(${p.foto})"></span><img class="photo${p.alta ? ' fit' : ''}${p.zoom ? ' zoom' : ''}" src="${p.foto}" alt="Frasco de ${p.nome}, ${p.marca}" loading="lazy" decoding="async">`
     : bottleSVG(p);
   const mediaStyle = (p) => p.foto ? ` has-photo" style="--photo-bg:${p.fundo}` : '';
 

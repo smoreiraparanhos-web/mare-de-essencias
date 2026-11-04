@@ -879,3 +879,6 @@ dialog .icon-btn:hover { background: var(--pearl); }
 .rail-btn { background: #fff; color: var(--ink); border-color: var(--line); }
 .top-num { top: 14px; left: 18px; font-size: 30px; opacity: 1; }
 .top-media { margin-top: 34px; }
+.product-media .photo.zoom, .top-media .photo.zoom { transform: scale(1.45); }
+.product:hover .product-media .photo.zoom { transform: scale(1.45); }
+.chip, .fav { z-index: 2; }

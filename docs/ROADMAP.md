@@ -71,3 +71,8 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Seções de produto (mais amados, Top 5, coleções) com fundo liso, para não ampliar imagens.
 - Fundos exportados em qualidade máxima no tamanho original; versões ampliadas e para celular removidas.
 - Removidos: camada de movimento (`js/vida.js`), faixas deslizando, poeira, névoa, inclinação 3D, borrifadas, barra de progresso.
+
+## Edição 10: novos perfumes
+- Com foto: Paradoxe, Homem Sagaz, Attar Al Wesal (Al Wataniah, a confirmar), Hawas for Him, Mercedes-Benz Select, Montblanc Individuel, Montblanc Starwalker, Nautica Voyage, Stella Dustin Homme Sport. Fotos de Phantom, Sauvage, Scandal, Sì e The Blend trocadas pelas versões originais.
+- Fotos quadradas aproximadas para o frasco ficar em destaque; fotos largas mostradas inteiras.
+- Arquivos enviados na raiz convertidos para `assets/produtos/` e retirados da raiz.
