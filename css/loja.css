@@ -191,7 +191,7 @@ h1 em, h2 em { font-style: italic; color: var(--rose-deep); }
 /* Trilho dos mais amados */
 .loved { background: linear-gradient(180deg, var(--cream), var(--pearl)); }
 .rail-wrap { position: relative; max-width: 1320px; margin: auto; }
-.rail { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 3 * 22px) / 4); gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 10px 4px 30px; }
+.rail { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 3 * 22px) / 4); gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 14px 6px 56px; margin-bottom: -26px; }
 .rail::-webkit-scrollbar { display: none; }
 .rail > * { scroll-snap-align: start; }
 .rail-btn { position: absolute; top: 40%; z-index: 3; }
@@ -528,10 +528,81 @@ dialog .icon-btn:hover { background: var(--pearl); }
 .footer-top { border-bottom-color: rgba(255, 255, 255, .1); }
 .footer-col a:hover { color: var(--gold-soft); }
 
+/* ================================================================
+   Movimento (js/vida.js)
+   ================================================================ */
+.progress { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-soft)); transform-origin: left; transform: scaleX(0); pointer-events: none; }
+
+/* Banner */
+.hero { --px: 0; --py: 0; }
+.hero-dust { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+.hero-mist { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.hero-mist span { position: absolute; width: 60%; aspect-ratio: 2 / 1; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, .07), rgba(255, 255, 255, 0)); filter: blur(10px); animation: mist 22s ease-in-out infinite; }
+.hero-mist span:nth-child(1) { left: 30%; top: 10%; }
+.hero-mist span:nth-child(2) { left: 50%; top: 45%; animation-duration: 28s; animation-delay: -9s; }
+.hero-mist span:nth-child(3) { left: -10%; top: 60%; animation-duration: 34s; animation-delay: -15s; opacity: .7; }
+@keyframes mist { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-12%, -8%) scale(1.25); } }
+.slide { z-index: 2; }
+.slide-art { transform: translate3d(calc(var(--px) * -22px), calc(var(--py) * -14px), 0); }
+.slide-art .halo { translate: calc(var(--px) * 30px) calc(var(--py) * 20px); }
+.slide-art .hero-bottle.back { margin-left: calc(var(--px) * -16px); }
+.slide-art::after { content: ''; position: absolute; left: 50%; top: 30%; width: 120px; height: 120px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, .55), rgba(255, 255, 255, 0)); opacity: 0; pointer-events: none; }
+.slide-art.spray::after { animation: spray 1.8s var(--ease) .9s both; }
+@keyframes spray { 0% { opacity: 0; transform: translate(-10%, 10%) scale(.2); } 25% { opacity: .9; } 100% { opacity: 0; transform: translate(-60%, -40%) scale(2.6); } }
+
+/* Faixa de marcas */
+.brands { margin: 26px 0 0; overflow: hidden; border-block: 1px solid var(--line); padding: 20px 0; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.brands-track { display: flex; width: max-content; animation: marquee 46s linear infinite; }
+.brands:hover .brands-track { animation-play-state: paused; }
+.brands-row { display: flex; align-items: center; gap: 34px; padding-right: 34px; }
+.brands-row span { font: italic 400 clamp(20px, 2.2vw, 28px) var(--display); color: var(--ink); white-space: nowrap; opacity: .78; transition: color .3s, opacity .3s; }
+.brands-row span:hover { color: var(--gold); opacity: 1; }
+.brands-row i { color: var(--gold); font-style: normal; font-size: 12px; }
+
+/* Títulos palavra por palavra */
+.js .split .w { display: inline-block; overflow: hidden; vertical-align: bottom; padding: 0 .04em .14em; margin: 0 -.04em -.14em; }
+.js .split .w > span { display: inline-block; transform: translateY(110%); transition: transform 1s var(--ease); transition-delay: calc(var(--i) * 60ms + .1s); }
+.js .reveal.visible .split .w > span { transform: none; }
+
+/* Cartões com inclinação 3D e brilho */
+.product, .top-card { --rx: 0deg; --ry: 0deg; --gx: 50%; --gy: 0%; transform-style: preserve-3d; will-change: transform; }
+.product:hover, .top-card:hover { transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(-6px); transition: transform .15s linear, box-shadow .5s; }
+.product::before { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 3; opacity: 0; transition: opacity .4s; background: radial-gradient(400px circle at var(--gx) var(--gy), rgba(220, 195, 148, .18), transparent 45%); }
+.product { position: relative; }
+.product:hover::before { opacity: 1; }
+
+/* Borrifada no cartão */
+.mist { position: absolute; left: 50%; top: 22%; width: 0; height: 0; z-index: 1; pointer-events: none; }
+.mist i { position: absolute; width: 50px; height: 50px; left: -25px; top: -25px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0)); opacity: 0; }
+.product:hover .mist i { animation: puff 1.4s var(--ease) both; }
+.product:hover .mist i:nth-child(2) { animation-delay: .12s; --dx: 40px; }
+.product:hover .mist i:nth-child(3) { animation-delay: .24s; --dx: -30px; }
+@keyframes puff { 0% { opacity: 0; transform: translate(0, 0) scale(.2); } 20% { opacity: .9; } 100% { opacity: 0; transform: translate(var(--dx, 10px), -50px) scale(2.2); } }
+
+/* Top 5: luz que segue o mouse e números que brilham */
+.top5 { --mx: 50%; --my: 40%; position: relative; background: radial-gradient(600px circle at var(--mx) var(--my), rgba(220, 195, 148, .1), transparent 60%), var(--night); }
+.top-num { background: linear-gradient(180deg, var(--gold-soft), var(--gold) 60%, #7a5d33); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.top-card:hover .top-num { animation: shine 1.2s var(--ease); }
+@keyframes shine { 50% { filter: brightness(1.5); } }
+
+/* Trilho arrastável */
+.rail { cursor: grab; }
+.rail.dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+
+/* Brilho suave no selo da história e no frasco da maré */
+.story-arch { position: relative; }
+.story-arch::after { content: ''; position: absolute; inset: -40% -60%; background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, .08) 50%, transparent 60%); animation: sweep 7s ease-in-out infinite; pointer-events: none; }
+@keyframes sweep { 0% { transform: translateX(-40%); } 60%, 100% { transform: translateX(40%); } }
+
 @media (max-width: 900px) {
   .nav { background: var(--night); }
 }
 @media (max-width: 640px) {
   .hero { border-radius: 18px; }
   .tide { border-radius: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .split .w > span { transform: none; }
+  .hero-mist, .hero-dust { display: none; }
+  .brands-track { animation: none; flex-wrap: wrap; }
 }

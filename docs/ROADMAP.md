@@ -41,3 +41,11 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Cabeçalho, banner, Top 5 e rodapé escuros; textos sem linguagem feminina.
 - Nova aba e categoria Unissex; mais masculinos (Eros, Invictus, 212 VIP Men, Y) e unissex (Ombré Leather, Wood Sage & Sea Salt, Erba Pura). Total: 33 perfumes.
 - Coleções abrem em Masculinos por padrão.
+
+## Edição 6: mais vida
+- Nova camada de movimento em `js/vida.js`: poeira dourada e névoa no banner, frascos que seguem o mouse, borrifada ao trocar de destaque.
+- Faixa de marcas deslizando, títulos que sobem palavra por palavra, parallax ao rolar.
+- Cartões com inclinação 3D, brilho e borrifada ao passar o mouse; luz que segue o mouse no Top 5; trilho que pode ser arrastado.
+- Barra dourada de progresso no cabeçalho.
+- Tudo desliga com "reduzir movimento"; efeitos de mouse só em telas com mouse.
+- Próximo passo para ainda mais vida: fotos e vídeo realistas (Higgsfield ou fotos com direito de uso).

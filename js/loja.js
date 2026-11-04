@@ -106,7 +106,7 @@
   function card(p) {
     const on = selected.has(p.id);
     return `<article class="product" data-family="${p.familia}" style="--tint:${mix(p.liquido, '#fbf6f1', .72)}">
-      <div class="product-media">${media(p)}
+      <div class="product-media"><span class="mist" aria-hidden="true"><i></i><i></i><i></i></span>${media(p)}
         <span class="chip">${p.familia}</span>
         <button class="fav" data-fav="${p.id}" aria-pressed="${on}" aria-label="${on ? 'Tirar' : 'Guardar'} ${p.nome} ${on ? 'da' : 'na'} seleção">${heart}</button>
       </div>
