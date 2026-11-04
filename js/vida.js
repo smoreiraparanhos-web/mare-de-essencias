@@ -45,7 +45,8 @@
   const layers = [
     ...$$('.family-arch svg').map((el) => ({ el, k: -0.06 })),
     ...$$('.story-bottle, .story-cut').map((el) => ({ el, k: -0.1 })),
-    ...$$('.family-arch img').map((el) => ({ el, k: -0.05 })),
+    ...$$('.sec-bg').map((el) => ({ el, k: 0.12 })),
+    ...$$('.story-frame').map((el) => ({ el, k: -0.06 })),
     ...$$('.tide-glass').map((el) => ({ el, k: -0.05 })),
     ...$$('.story-ring').map((el) => ({ el, k: 0.12 })),
     ...$$('.top-media').map((el, i) => ({ el, k: i % 2 ? -0.05 : 0.05 }))
@@ -151,6 +152,31 @@
     $$('.slide').forEach((s) => slidesObs.observe(s, { attributes: true, attributeFilter: ['class'] }));
     const first = $('.slide.is-current .slide-art');
     if (first) first.classList.add('spray');
+  }
+
+  /* ---------- Famílias: o fundo da seção muda com a família ---------- */
+  const famBgs = $$('[data-fam-bg]');
+  const famTiles = $$('[data-fam]');
+  if (famBgs.length && famTiles.length) {
+    let famIndex = 0, famTimer = 0;
+    const showFam = (name) => {
+      famBgs.forEach((b) => b.classList.toggle('on', b.dataset.famBg === name));
+      famTiles.forEach((t) => t.classList.toggle('on', t.dataset.fam === name));
+      famIndex = famTiles.findIndex((t) => t.dataset.fam === name);
+    };
+    const cycle = () => {
+      clearInterval(famTimer);
+      if (calm()) return;
+      famTimer = setInterval(() => showFam(famTiles[(famIndex + 1) % famTiles.length].dataset.fam), 4200);
+    };
+    famTiles.forEach((t) => {
+      t.addEventListener('pointerenter', () => { clearInterval(famTimer); showFam(t.dataset.fam); });
+      t.addEventListener('focus', () => { clearInterval(famTimer); showFam(t.dataset.fam); });
+      t.addEventListener('pointerleave', cycle);
+      t.addEventListener('blur', cycle);
+    });
+    showFam(famTiles[0].dataset.fam);
+    cycle();
   }
 
   /* ---------- Cartões com inclinação 3D ---------- */

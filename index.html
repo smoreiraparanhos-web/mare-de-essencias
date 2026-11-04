@@ -69,7 +69,7 @@
           <p>Masculinos, femininos e unissex escolhidos para marcar o seu dia e a sua noite.</p>
           <a class="btn" href="#colecoes" data-tab-link="Masculino">Ver coleções</a>
         </div>
-        <div class="slide-art" data-cut="assets/produtos/sauvage-recorte.webp" data-product="13"></div>
+        <div class="slide-art" data-tile="13"></div>
       </article>
       <article class="slide has-bg" data-theme="amber" style="--bg:url(../assets/fundos/banho-ambar.webp);--bg-p:url(../assets/fundos/banho-ambar-p.webp)" aria-roledescription="slide" aria-label="2 de 3" aria-hidden="true">
         <div class="slide-copy">
@@ -78,7 +78,7 @@
           <p>Fragrâncias quentes e marcantes, para quem gosta de deixar rastro por onde passa.</p>
           <a class="btn" href="#catalogo" data-family-link="Oriental">Ver orientais</a>
         </div>
-        <div class="slide-art slide-art-empty"></div>
+        <div class="slide-art" data-tile="20"></div>
       </article>
       <article class="slide has-bg" data-theme="pearl" style="--bg:url(../assets/fundos/agua-violeta.webp);--bg-p:url(../assets/fundos/agua-violeta-p.webp)" aria-roledescription="slide" aria-label="3 de 3" aria-hidden="true">
         <div class="slide-copy">
@@ -87,7 +87,7 @@
           <p>Arraste, veja o frasco mudar de cor e descubra a família de perfumes que combina com você.</p>
           <a class="btn" href="#mare">Descobrir minha maré</a>
         </div>
-        <div class="slide-art" data-cut="assets/produtos/linterdit-recorte.webp" data-product="47"></div>
+        <div class="slide-art" data-tile="47"></div>
       </article>
     </div>
     <div class="hero-controls">
@@ -107,41 +107,44 @@
   </div>
 
   <!-- Famílias olfativas -->
-  <section class="section families" aria-labelledby="fam-title">
+  <section class="section families on-image" aria-labelledby="fam-title">
+    <div class="sec-bg fam-bgs" aria-hidden="true"><div class="fam-bg on" data-fam-bg="Fresco" style="--bg:url(../assets/fundos/limao-descascado.webp);--bg-p:url(../assets/fundos/limao-descascado-p.webp)"></div><div class="fam-bg" data-fam-bg="Floral" style="--bg:url(../assets/fundos/flor-copo-de-leite.webp);--bg-p:url(../assets/fundos/flor-copo-de-leite-p.webp)"></div><div class="fam-bg" data-fam-bg="Amadeirado" style="--bg:url(../assets/fundos/marmore-arco.webp);--bg-p:url(../assets/fundos/marmore-arco-p.webp)"></div><div class="fam-bg" data-fam-bg="Oriental" style="--bg:url(../assets/fundos/ambar.webp);--bg-p:url(../assets/fundos/ambar-p.webp)"></div></div><div class="sec-shade shade-dark" aria-hidden="true"></div>
     <header class="section-head reveal">
       <span class="eyebrow">Explore por família</span>
       <h2 id="fam-title">Qual cheiro <em>tem a sua cara?</em></h2>
+      <p>Passe o mouse ou toque em uma família para sentir o clima de cada uma.</p>
     </header>
-    <div class="family-grid">
-      <a class="family reveal" href="#catalogo" data-family-link="Fresco" style="--d:0s">
-        <span class="family-arch has-img fam-fresco" aria-hidden="true"><img src="assets/fundos/limao-descascado-p.webp" alt="" loading="lazy" decoding="async" style="object-position:62% 50%">
-        </span>
+    <div class="fam-grid">
+      <a class="fam-tile reveal" href="#catalogo" data-family-link="Fresco" data-fam="Fresco" style="--d:0.0s">
+        <span class="fam-num">01</span>
         <span class="family-name">Frescos</span>
         <span class="family-notes">Cítricos, marinhos e verdes</span>
+        <span class="fam-go">Explorar <i aria-hidden="true">→</i></span>
       </a>
-      <a class="family reveal" href="#catalogo" data-family-link="Floral" style="--d:.08s">
-        <span class="family-arch has-img fam-floral" aria-hidden="true"><img src="assets/fundos/flor-copo-de-leite-p.webp" alt="" loading="lazy" decoding="async" style="object-position:70% 40%">
-        </span>
+      <a class="fam-tile reveal" href="#catalogo" data-family-link="Floral" data-fam="Floral" style="--d:0.08s">
+        <span class="fam-num">02</span>
         <span class="family-name">Florais</span>
         <span class="family-notes">Rosa, jasmim e flor de laranjeira</span>
+        <span class="fam-go">Explorar <i aria-hidden="true">→</i></span>
       </a>
-      <a class="family reveal" href="#catalogo" data-family-link="Amadeirado" style="--d:.16s">
-        <span class="family-arch has-img fam-madeira" aria-hidden="true"><img src="assets/fundos/marmore-arco-p.webp" alt="" loading="lazy" decoding="async" style="object-position:82% 60%">
-        </span>
+      <a class="fam-tile reveal" href="#catalogo" data-family-link="Amadeirado" data-fam="Amadeirado" style="--d:0.16s">
+        <span class="fam-num">03</span>
         <span class="family-name">Amadeirados</span>
         <span class="family-notes">Cedro, sândalo e vetiver</span>
+        <span class="fam-go">Explorar <i aria-hidden="true">→</i></span>
       </a>
-      <a class="family reveal" href="#catalogo" data-family-link="Oriental" style="--d:.24s">
-        <span class="family-arch has-img fam-oriental" aria-hidden="true"><img src="assets/fundos/ambar-p.webp" alt="" loading="lazy" decoding="async" style="object-position:80% 50%">
-        </span>
+      <a class="fam-tile reveal" href="#catalogo" data-family-link="Oriental" data-fam="Oriental" style="--d:0.24s">
+        <span class="fam-num">04</span>
         <span class="family-name">Orientais</span>
         <span class="family-notes">Âmbar, baunilha e especiarias</span>
+        <span class="fam-go">Explorar <i aria-hidden="true">→</i></span>
       </a>
     </div>
   </section>
 
   <!-- Os mais amados -->
-  <section class="section loved" aria-labelledby="loved-title">
+  <section class="section loved on-image" aria-labelledby="loved-title">
+    <div class="sec-bg" aria-hidden="true" style="--bg:url(../assets/fundos/praia-quente.webp);--bg-p:url(../assets/fundos/praia-quente-p.webp)"></div><div class="sec-shade shade-dark" aria-hidden="true"></div>
     <header class="section-head reveal">
       <span class="eyebrow">Sucesso em todo lugar</span>
       <h2 id="loved-title">Os mais <em>amados</em></h2>
@@ -155,7 +158,8 @@
   </section>
 
   <!-- Top 5 -->
-  <section class="section top5" aria-labelledby="top-title">
+  <section class="section top5 on-image" aria-labelledby="top-title">
+    <div class="sec-bg" aria-hidden="true" style="--bg:url(../assets/fundos/agua-violeta.webp);--bg-p:url(../assets/fundos/agua-violeta-p.webp)"></div><div class="sec-shade shade-dark" aria-hidden="true"></div>
     <header class="section-head reveal">
       <span class="eyebrow">Escolha da casa</span>
       <h2 id="top-title">Top 5 <em>da curadoria</em></h2>
@@ -165,7 +169,8 @@
   </section>
 
   <!-- Momento interativo -->
-  <section class="tide has-bg" id="mare" aria-labelledby="tide-title" style="--bg:url(../assets/fundos/plano-japa.webp);--bg-p:url(../assets/fundos/plano-japa-p.webp)">
+  <section class="tide on-light" id="mare" aria-labelledby="tide-title">
+    <div class="sec-bg" aria-hidden="true" style="--bg:url(../assets/fundos/plano-japa.webp);--bg-p:url(../assets/fundos/plano-japa-p.webp)"></div><div class="sec-shade shade-tide" aria-hidden="true"></div>
     <div class="tide-bg" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="tide-copy reveal">
       <span class="eyebrow">Um gesto, uma maré</span>
@@ -195,7 +200,8 @@
   </section>
 
   <!-- Coleções em abas -->
-  <section class="section collections" id="colecoes" aria-labelledby="col-title">
+  <section class="section collections on-light" id="colecoes" aria-labelledby="col-title">
+    <div class="sec-bg" aria-hidden="true" style="--bg:url(../assets/fundos/pano-rosado.webp);--bg-p:url(../assets/fundos/pano-rosado-p.webp)"></div><div class="sec-shade shade-light" aria-hidden="true"></div>
     <header class="section-head reveal">
       <span class="eyebrow">Coleções</span>
       <h2 id="col-title">Perfumes <em>para cada estilo</em></h2>
@@ -292,9 +298,10 @@
   </section>
 
   <!-- Nossa história -->
-  <section class="story" aria-labelledby="story-title">
+  <section class="story on-image" aria-labelledby="story-title">
+    <div class="sec-bg" aria-hidden="true" style="--bg:url(../assets/fundos/banho-ambar.webp);--bg-p:url(../assets/fundos/banho-ambar-p.webp)"></div><div class="sec-shade shade-story" aria-hidden="true"></div>
     <div class="story-art reveal" aria-hidden="true">
-      <div class="story-arch has-bg" style="--bg:url(../assets/fundos/pano-rosado.webp);--bg-p:url(../assets/fundos/pano-rosado-p.webp)"><img class="story-cut" src="assets/produtos/invictus-recorte.webp" alt="" loading="lazy" decoding="async"></div>
+      <figure class="story-frame"><img src="assets/produtos/invictus-victory.webp" alt="" loading="lazy" decoding="async"></figure>
       <svg class="story-ring" viewBox="0 0 200 200"><defs><path id="ring" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1-160 0"/></defs><text><textPath href="#ring">PERFUME É MEMÓRIA QUE A GENTE VESTE ✦ PERFUME É MEMÓRIA QUE A GENTE VESTE ✦</textPath></text></svg>
     </div>
     <div class="story-copy reveal">
@@ -307,8 +314,9 @@
   </section>
 
   <!-- Chamada final -->
-  <section class="final" aria-labelledby="final-title">
-    <div class="final-inner reveal has-bg" style="--bg:url(../assets/fundos/praia-quente.webp);--bg-p:url(../assets/fundos/praia-quente-p.webp)">
+  <section class="final on-image" aria-labelledby="final-title">
+    <div class="sec-bg" aria-hidden="true" style="--bg:url(../assets/fundos/marmore-arco.webp);--bg-p:url(../assets/fundos/marmore-arco-p.webp)"></div><div class="sec-shade shade-final" aria-hidden="true"></div>
+    <div class="final-inner reveal">
       <span class="eyebrow">Ficou em dúvida?</span>
       <h2 id="final-title">Guarde seus favoritos<br><em>e escolha com calma.</em></h2>
       <p>Toque no coração dos perfumes que chamaram sua atenção. Sua seleção fica guardada aqui enquanto você navega.</p>

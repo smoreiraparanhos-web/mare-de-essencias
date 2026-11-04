@@ -67,7 +67,9 @@
     P(46, 'Impression In Black', 'Eudora', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#1e1e20', '#1c1c1f'),
     P(47, "L'Interdit", 'Givenchy', 'Feminino', 'Floral', 'Flor de laranjeira · Jasmim · Patchouli', 'round', '#f3c9a8', '#1c1c1f'),
     P(48, 'Club 6 Exclusive', 'Eudora', 'Masculino', 'Oriental', 'Notas em breve', 'classic', '#a8741e', '#c9a26b'),
-    P(49, 'Malbec Magnetic', 'O Boticário', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#c0c4c9', '#1c1c1f')
+    P(49, 'Malbec Magnetic', 'O Boticário', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#c0c4c9', '#1c1c1f'),
+    P(50, 'Clash', 'O Boticário', 'Masculino', 'Fresco', 'Notas em breve', 'tall', '#8fc3d6', '#c0c4c9'),
+    P(51, 'The Blend', 'O Boticário', 'Masculino', 'Amadeirado', 'Notas em breve', 'square', '#3a2a1e', '#a8743c')
   ];
 
   /* Fotos reais: id -> [arquivo, cor do fundo da foto]. */
@@ -93,12 +95,17 @@
     46: ['impression-in-black.webp', '#e0dcd3'],
     47: ['linterdit.webp', '#f6f0ea'],
     48: ['club-6-exclusive.webp', '#ded7d1'],
-    49: ['malbec-magnetic.webp', '#e9e6e1']
+    49: ['malbec-magnetic.webp', '#e9e6e1'],
+    20: ['asad.webp', '#ddd5d0'],
+    50: ['clash.webp', '#dcd6ce'],
+    51: ['the-blend.webp', '#e2ddd5']
   };
   Object.entries(fotos).forEach(([id, [arq, fundo]]) => {
     const p = produtos.find((x) => x.id === Number(id));
     if (p) { p.foto = 'assets/produtos/' + arq; p.fundo = fundo; }
   });
+  /* Fotos mais altas que o quadro: mostradas inteiras, sem corte. */
+  [20, 34, 46, 49, 50, 51].forEach((id) => { const p = produtos.find((x) => x.id === id); if (p) p.alta = true; });
   /* Produtos com foto aparecem primeiro nas listas. */
   const comFotoPrimeiro = (a, b) => (b.foto ? 1 : 0) - (a.foto ? 1 : 0);
   const byId = (id) => produtos.find((p) => p.id === Number(id));
@@ -146,7 +153,7 @@
   }
 
   const media = (p) => p.foto
-    ? `<img class="photo" src="${p.foto}" alt="Frasco de ${p.nome}, ${p.marca}" loading="lazy" decoding="async">`
+    ? `<span class="photo-fill" aria-hidden="true" style="background-image:url(${p.foto})"></span><img class="photo${p.alta ? ' fit' : ''}" src="${p.foto}" alt="Frasco de ${p.nome}, ${p.marca}" loading="lazy" decoding="async">`
     : bottleSVG(p);
   const mediaStyle = (p) => p.foto ? ` has-photo" style="--photo-bg:${p.fundo}` : '';
 
@@ -195,11 +202,12 @@
 
   /* ---------- Banner em carrossel ---------- */
   $$('.slide-art').forEach((el) => {
-    if (el.dataset.cut) {
-      const p = byId(el.dataset.product);
-      el.innerHTML = `<span class="halo"></span><img class="hero-cut" src="${el.dataset.cut}" alt="Frasco de ${p.nome}, ${p.marca}" decoding="async">
-        <span class="sparkle" style="--x:18%;--y:24%"></span><span class="sparkle" style="--x:82%;--y:18%;--dl:-1.2s"></span>
-        <span class="hero-caption">${p.nome} <i>·</i> ${p.marca}</span>`;
+    if (el.dataset.tile) {
+      const p = byId(el.dataset.tile);
+      el.innerHTML = `<figure class="hero-tile" style="--photo-bg:${p.fundo}">
+          <div class="hero-tile-photo"><span class="photo-fill" aria-hidden="true" style="background-image:url(${p.foto})"></span><img src="${p.foto}" alt="Frasco de ${p.nome}, ${p.marca}" decoding="async"></div>
+          <figcaption><span class="brand">${p.marca}</span><b>${p.nome}</b><span class="hero-tile-notes">${p.notas}</span></figcaption>
+        </figure>`;
       return;
     }
     if (!el.dataset.bottle) return;

@@ -56,4 +56,10 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - 9 fundos da loja em `assets/fundos/` (versão grande e versão `-p` para celular): banner (pedra com arco, âmbar no mar, cristal violeta), famílias (limão, flor, pedra, âmbar), maré (onda japonesa), história (seda rosada), chamada final (praia).
 - Originais em PNG retirados da raiz do projeto para não pesar o site (continuam no histórico do Git).
 - Banner 2 passou a destacar Orientais (há poucos árabes com foto).
-- A confirmar com a loja: nome dos frascos "armaf" e "clash" e do frasco cor de cobre; fotos de Paradoxe e Homem Sagaz; notas dos nacionais (Natura, Eudora, O Boticário); direito de uso das fotos; se o catálogo fica só com os perfumes da loja.
+- A confirmar com a loja: marca de The Blend (cadastrado como O Boticário); fotos de Paradoxe e Homem Sagaz; notas dos nacionais (Natura, Eudora, O Boticário); direito de uso das fotos; se o catálogo fica só com os perfumes da loja.
+
+## Edição 8: fundos de seção e fotos inteiras
+- Recortes removidos. Fotos dos perfumes ocupam o quadro inteiro (5:8); frascos altos aparecem inteiros, sem corte.
+- Fundos da loja agora são fundos de seção, de ponta a ponta, com parallax: banner (pedra, âmbar, cristal violeta), famílias (o fundo troca com a família em foco: limão, flor, pedra, âmbar), mais amados (praia), Top 5 (cristal violeta), maré (onda japonesa), coleções (seda rosada), história (âmbar no mar), chamada final (pedra com arco).
+- Banner de ponta a ponta com cartão de vidro mostrando o produto em foto.
+- Novos com foto: Lattafa Asad, Clash (O Boticário), The Blend.
