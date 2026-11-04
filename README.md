@@ -3,12 +3,13 @@
 Protótipo estático, responsivo e original para apresentação visual. **Não é uma loja operacional**: produtos, preços, nomes e frascos são fictícios, não há estoque, checkout, pagamento ou cadastro.
 
 ## Executar
-Abra `index.html` no navegador ou use Live Server no VS Code. Fontes Google são opcionais e exigem conexão.
+Abra `index.html` no navegador ou rode um servidor local (`npx http-server`) na pasta do projeto. Fontes Google são opcionais e exigem conexão.
 
 ## Personalizar
 - `index.html`: conteúdo, seções, SEO e textos.
 - `css/style.css`: identidade visual e layout.
 - `js/app.js`: catálogo de demonstração e filtros.
+- `js/cinema.js` e `css/cinema.css`: abertura em mergulho (canvas controlado pelo scroll), seletor de maré e animações do site.
 - `docs/BRIEFING.md`: dados da marca e operação comercial.
 - `CLAUDE.md`: instruções para evolução com Claude Code.
 

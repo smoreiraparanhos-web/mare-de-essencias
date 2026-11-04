@@ -17,3 +17,11 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Seção de atendimento acolhedor, editorial oceânico e revista olfativa.
 - Microinterações em cards, animações com suporte a movimento reduzido.
 - Pendente: imagens reais licenciadas, dados de estoque, backend, carrinho, checkout e testes completos em navegadores.
+
+## Edição 3: o mergulho
+- Abertura cinematográfica controlada pelo scroll (`js/cinema.js`, `css/cinema.css`): do céu do amanhecer, a câmera atravessa a superfície e desce até a areia, onde o frasco repousa sob um raio de sol. Tudo desenhado em canvas, sem vídeo nem imagens externas.
+- Medidor de profundidade com os quatro capítulos da abertura.
+- Momento interativo "Qual maré combina com você?": controle deslizante que muda a cor do frasco e filtra o catálogo pela família.
+- Movimento leve no resto do site: faixa deslizante, ondas que se desenham ao rolar, bolhas no manifesto.
+- Movimento reduzido e sem JavaScript: a abertura vira uma capa estática com todo o texto.
+- Pendente: imagens reais licenciadas; avaliar vídeo gerado para a abertura quando houver ferramenta de geração conectada.
