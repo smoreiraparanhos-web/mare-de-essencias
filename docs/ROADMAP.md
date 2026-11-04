@@ -49,3 +49,9 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Barra dourada de progresso no cabeçalho.
 - Tudo desliga com "reduzir movimento"; efeitos de mouse só em telas com mouse.
 - Próximo passo para ainda mais vida: fotos e vídeo realistas (Higgsfield ou fotos com direito de uso).
+
+## Edição 7: fotos reais (em andamento)
+- Fotos da loja em `assets/produtos/` (webp, 1000px de altura). Cards em 3:4 com fundo na cor da foto e bordas suavizadas.
+- Com foto: Sauvage Eau de Parfum, Phantom, Scandal, Sì. Produtos com foto aparecem primeiro nas listas.
+- Cadastrados aguardando arquivo: Good Girl, La Vie Est Belle, Libre, Paradoxe, Homem Sagaz, Bright Crystal, Botica 214 Verano en Firenze, Alien, For Her, Club 6 Intenso, Coco Mademoiselle, Homem Cor.agio, J'adore, Invictus Victory, Bloom, Impression In Black, Light Blue.
+- A confirmar com a loja: notas dos nacionais (Natura, Eudora, O Boticário), dois frascos sem rótulo, direito de uso das fotos e se o catálogo fica só com os perfumes da loja.
