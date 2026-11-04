@@ -1,6 +1,6 @@
 # Direção de desenvolvimento — Maré de Essências
 
-Perfumaria com curadoria de femininos, masculinos, árabes e nicho. Visual feminino e sofisticado: creme, nude, rosé e dourado, formas arredondadas e em arco, tipografia Bodoni Moda (títulos) e Jost (texto). O tema do mar aparece de forma sutil (ondas, maré, pérola). Evitar formas quadradas, template genérico e excesso de ornamentos.
+Perfumaria com curadoria para todos os públicos: masculinos, femininos, unissex, árabes e nicho. Visual masculino e sóbrio, sem parecer feminino: grafite e preto (cabeçalho, banner, Top 5, rodapé), areia clara nas seções, dourado como destaque. Cantos levemente arredondados (10 a 22px), sem arcos nem formas totalmente quadradas. Tipografia Playfair Display (títulos) e Jost (texto). O tema do mar aparece de forma sutil (ondas, maré). Evitar template genérico e excesso de ornamentos.
 
 Estrutura de loja inspirada em perfumarias online (banner em carrossel, famílias olfativas, mais amados, top 5, coleções em abas, faixa de cuidado). Catálogo completo fica escondido até ser pedido.
 

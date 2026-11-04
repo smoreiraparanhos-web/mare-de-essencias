@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#fbf6f1">
-<meta name="description" content="Maré de Essências: perfumaria com curadoria de femininos, masculinos, árabes e nicho. Encontre a fragrância que combina com você.">
+<meta name="theme-color" content="#121418">
+<meta name="description" content="Maré de Essências: perfumaria com curadoria de masculinos, femininos, unissex, árabes e nicho. Encontre a fragrância que combina com você.">
 <title>Maré de Essências · Perfumaria</title>
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="css/loja.css">
 <script src="js/loja.js" defer></script>
 </head>
@@ -18,9 +18,9 @@
 
 <div class="announce" aria-label="Avisos">
   <div class="announce-track">
-    <span>Curadoria de femininos, masculinos, árabes e nicho</span>
+    <span>Curadoria de masculinos, femininos, unissex, árabes e nicho</span>
     <span aria-hidden="true">✦</span>
-    <span>Ajuda com carinho para encontrar o seu perfume</span>
+    <span>Atendimento direto para encontrar o seu perfume</span>
     <span aria-hidden="true">✦</span>
     <span>Ideias de presente para cada estilo</span>
     <span aria-hidden="true">✦</span>
@@ -36,8 +36,9 @@
     <span class="logo-text"><span class="logo-name">Maré <i>de</i> Essências</span><span class="logo-sub">PERFUMARIA</span></span>
   </a>
   <nav class="nav" id="nav" aria-label="Principal">
-    <a href="#colecoes" data-tab-link="Feminino">Femininos</a>
     <a href="#colecoes" data-tab-link="Masculino">Masculinos</a>
+    <a href="#colecoes" data-tab-link="Feminino">Femininos</a>
+    <a href="#colecoes" data-tab-link="Unissex">Unissex</a>
     <a href="#colecoes" data-tab-link="Árabe">Árabes</a>
     <a href="#colecoes" data-tab-link="Nicho">Nicho</a>
     <a href="#mare">Sua maré</a>
@@ -61,12 +62,12 @@
     <div class="hero-slides">
       <article class="slide is-current" data-theme="rose" aria-roledescription="slide" aria-label="1 de 3">
         <div class="slide-copy">
-          <span class="eyebrow">Femininos que ficam na memória</span>
-          <h1>Para ser<br><em>lembrada.</em></h1>
-          <p>Florais delicados e gourmands envolventes, escolhidos para acompanhar o seu dia e a sua noite.</p>
-          <a class="btn" href="#colecoes" data-tab-link="Feminino">Ver femininos</a>
+          <span class="eyebrow">Perfumaria para todos os estilos</span>
+          <h1>Presença<br><em>que fica.</em></h1>
+          <p>Masculinos, femininos e unissex escolhidos para marcar o seu dia e a sua noite.</p>
+          <a class="btn" href="#colecoes" data-tab-link="Masculino">Ver coleções</a>
         </div>
-        <div class="slide-art" data-bottle="1" data-bottle-b="3"></div>
+        <div class="slide-art" data-bottle="13" data-bottle-b="1"></div>
       </article>
       <article class="slide" data-theme="amber" aria-roledescription="slide" aria-label="2 de 3" aria-hidden="true">
         <div class="slide-copy">
@@ -75,7 +76,7 @@
           <p>Fragrâncias intensas, quentes e marcantes, para quem gosta de deixar rastro por onde passa.</p>
           <a class="btn" href="#colecoes" data-tab-link="Árabe">Ver árabes</a>
         </div>
-        <div class="slide-art" data-bottle="19" data-bottle-b="7"></div>
+        <div class="slide-art" data-bottle="20" data-bottle-b="19"></div>
       </article>
       <article class="slide" data-theme="pearl" aria-roledescription="slide" aria-label="3 de 3" aria-hidden="true">
         <div class="slide-copy">
@@ -84,7 +85,7 @@
           <p>Arraste, veja o frasco mudar de cor e descubra a família de perfumes que combina com você.</p>
           <a class="btn" href="#mare">Descobrir minha maré</a>
         </div>
-        <div class="slide-art" data-bottle="11" data-bottle-b="9"></div>
+        <div class="slide-art" data-bottle="14" data-bottle-b="28"></div>
       </article>
     </div>
     <div class="hero-controls">
@@ -197,12 +198,13 @@
       <h2 id="col-title">Perfumes <em>para cada estilo</em></h2>
     </header>
     <div class="tabs" role="tablist" aria-label="Coleções">
-      <button role="tab" id="tab-Feminino" aria-selected="true" aria-controls="tab-panel" data-tab="Feminino">Femininos</button>
-      <button role="tab" id="tab-Masculino" aria-selected="false" aria-controls="tab-panel" data-tab="Masculino" tabindex="-1">Masculinos</button>
+      <button role="tab" id="tab-Masculino" aria-selected="true" aria-controls="tab-panel" data-tab="Masculino">Masculinos</button>
+      <button role="tab" id="tab-Feminino" aria-selected="false" aria-controls="tab-panel" data-tab="Feminino" tabindex="-1">Femininos</button>
+      <button role="tab" id="tab-Unissex" aria-selected="false" aria-controls="tab-panel" data-tab="Unissex" tabindex="-1">Unissex</button>
       <button role="tab" id="tab-Árabe" aria-selected="false" aria-controls="tab-panel" data-tab="Árabe" tabindex="-1">Árabes</button>
       <button role="tab" id="tab-Nicho" aria-selected="false" aria-controls="tab-panel" data-tab="Nicho" tabindex="-1">Nicho</button>
     </div>
-    <div class="product-grid" id="tab-panel" role="tabpanel" aria-labelledby="tab-Feminino"></div>
+    <div class="product-grid" id="tab-panel" role="tabpanel" aria-labelledby="tab-Masculino"></div>
     <div class="center">
       <button class="btn btn-outline" id="open-catalog" aria-expanded="false" aria-controls="catalogo">Ver catálogo completo</button>
     </div>
@@ -220,7 +222,7 @@
       </header>
       <div class="toolbar">
         <label class="field field-search"><span>Buscar</span><input id="search" type="search" placeholder="Nome, marca ou nota..." autocomplete="off"></label>
-        <label class="field"><span>Coleção</span><select id="cat-filter"><option value="">Todas</option><option>Feminino</option><option>Masculino</option><option>Árabe</option><option>Nicho</option><option>Unissex</option></select></label>
+        <label class="field"><span>Coleção</span><select id="cat-filter"><option value="">Todas</option><option>Masculino</option><option>Feminino</option><option>Unissex</option><option>Árabe</option><option>Nicho</option></select></label>
         <label class="field"><span>Família</span><select id="family"><option value="">Todas</option><option>Fresco</option><option>Floral</option><option>Amadeirado</option><option>Oriental</option></select></label>
       </div>
       <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
@@ -232,7 +234,7 @@
   <section class="care" aria-label="Como atendemos">
     <div class="care-item reveal" style="--d:0s">
       <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6l4.5 9.3 10.2 1.5-7.4 7.2 1.8 10.2L24 29.4l-9.1 4.8 1.8-10.2-7.4-7.2 10.2-1.5Z"/></svg>
-      <b>Curadoria com carinho</b><span>Cada perfume escolhido a dedo</span>
+      <b>Curadoria criteriosa</b><span>Cada perfume escolhido a dedo</span>
     </div>
     <div class="care-item reveal" style="--d:.08s">
       <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 12h28a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H22l-8 7v-7h-4a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4Z"/><path d="M16 22h16M16 27h10"/></svg>
@@ -244,7 +246,7 @@
     </div>
     <div class="care-item reveal" style="--d:.24s">
       <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c6 6 6 28 0 34M24 7c-6 6-6 28 0 34"/></svg>
-      <b>Do Brasil e do mundo</b><span>Nacionais, importados, árabes e nicho</span>
+      <b>Para todos os estilos</b><span>Masculinos, femininos, unissex, árabes e nicho</span>
     </div>
   </section>
 
@@ -289,13 +291,13 @@
   <!-- Nossa história -->
   <section class="story" aria-labelledby="story-title">
     <div class="story-art reveal" aria-hidden="true">
-      <div class="story-arch"><div class="story-bottle" data-bottle="10"></div></div>
+      <div class="story-arch"><div class="story-bottle" data-bottle="27"></div></div>
       <svg class="story-ring" viewBox="0 0 200 200"><defs><path id="ring" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1-160 0"/></defs><text><textPath href="#ring">PERFUME É MEMÓRIA QUE A GENTE VESTE ✦ PERFUME É MEMÓRIA QUE A GENTE VESTE ✦</textPath></text></svg>
     </div>
     <div class="story-copy reveal">
       <span class="eyebrow">Nossa história</span>
       <h2 id="story-title">Mais que perfume, <em>um jeito de se sentir.</em></h2>
-      <p>A Maré de Essências nasce do amor por fragrâncias e pela sensação de encontrar aquela que parece feita para você. Como a maré, cada pessoa muda ao longo do dia, e o perfume acompanha.</p>
+      <p>A Maré de Essências nasce da paixão por fragrâncias e pela sensação de encontrar aquela que parece feita para você. Como a maré, cada pessoa muda ao longo do dia, e o perfume acompanha.</p>
       <p>Aqui você encontra clássicos que todo mundo ama, achados árabes e criações de nicho, sempre com atendimento próximo e sem pressa.</p>
       <a class="btn" href="#mare">Encontrar o meu perfume</a>
     </div>
@@ -316,12 +318,13 @@
   <div class="footer-top">
     <div class="footer-brand">
       <span class="logo-name">Maré <i>de</i> Essências</span>
-      <p>Perfumaria com curadoria de femininos, masculinos, árabes e nicho.</p>
+      <p>Perfumaria com curadoria de masculinos, femininos, unissex, árabes e nicho.</p>
     </div>
     <div class="footer-col">
       <h3>Coleções</h3>
-      <a href="#colecoes" data-tab-link="Feminino">Femininos</a>
       <a href="#colecoes" data-tab-link="Masculino">Masculinos</a>
+      <a href="#colecoes" data-tab-link="Feminino">Femininos</a>
+      <a href="#colecoes" data-tab-link="Unissex">Unissex</a>
       <a href="#colecoes" data-tab-link="Árabe">Árabes</a>
       <a href="#colecoes" data-tab-link="Nicho">Nicho</a>
     </div>

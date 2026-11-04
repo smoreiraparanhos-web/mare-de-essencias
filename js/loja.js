@@ -42,11 +42,18 @@
     P(23, 'Aventus', 'Creed', 'Nicho', 'Fresco', 'Abacaxi · Bétula · Almíscar', 'classic', '#dfe7ee', '#3a3a40'),
     P(24, 'Santal 33', 'Le Labo', 'Nicho', 'Amadeirado', 'Sândalo · Cardamomo · Couro', 'classic', '#efe6d6', '#2f3440'),
     P(25, 'Lost Cherry', 'Tom Ford', 'Nicho', 'Oriental', 'Cereja · Amêndoa amarga · Fava tonka', 'square', '#8e1f33', '#3a2a2f'),
-    P(26, 'CK One', 'Calvin Klein', 'Unissex', 'Fresco', 'Bergamota · Chá verde · Almíscar', 'tall', '#e6eee6', '#b7bcbf')
+    P(26, 'CK One', 'Calvin Klein', 'Unissex', 'Fresco', 'Bergamota · Chá verde · Almíscar', 'tall', '#e6eee6', '#b7bcbf'),
+    P(27, 'Ombré Leather', 'Tom Ford', 'Unissex', 'Amadeirado', 'Couro · Cardamomo · Jasmim', 'square', '#4a382e', '#2f3440'),
+    P(28, 'Wood Sage & Sea Salt', 'Jo Malone London', 'Unissex', 'Fresco', 'Sálvia · Sal marinho · Ambreta', 'square', '#dfe3d9', '#c9c5bd'),
+    P(29, 'Erba Pura', 'Xerjoff', 'Unissex', 'Oriental', 'Frutas · Âmbar · Almíscar', 'facet', '#e9c46a', '#c9a26b'),
+    P(30, 'Eros', 'Versace', 'Masculino', 'Oriental', 'Hortelã · Maçã verde · Baunilha', 'classic', '#4fa3a5', '#c9a26b'),
+    P(31, 'Invictus', 'Paco Rabanne', 'Masculino', 'Fresco', 'Toranja · Notas marinhas · Louro', 'facet', '#c9d6de', '#c0c4c9'),
+    P(32, '212 VIP Men', 'Carolina Herrera', 'Masculino', 'Oriental', 'Gengibre · Especiarias · Âmbar', 'tall', '#5a5e66', '#c0c4c9'),
+    P(33, 'Y', 'Yves Saint Laurent', 'Masculino', 'Fresco', 'Maçã · Sálvia · Fava tonka', 'tall', '#9fb7d0', '#2f3440')
   ];
   const byId = (id) => produtos.find((p) => p.id === Number(id));
-  const maisAmados = [13, 1, 2, 19, 10, 7, 15, 3, 14, 9];
-  const top5 = [1, 13, 7, 10, 2];
+  const maisAmados = [13, 1, 14, 19, 10, 30, 2, 27, 15, 7];
+  const top5 = [13, 10, 19, 1, 27];
 
   /* ---------- Cores ---------- */
   const hex = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
@@ -193,7 +200,7 @@
       t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
       if (on) { panel.setAttribute('aria-labelledby', t.id); if (focus) t.focus(); }
     });
-    const list = produtos.filter((p) => p.cat === cat || (cat === 'Nicho' && p.cat === 'Unissex')).slice(0, 8);
+    const list = produtos.filter((p) => p.cat === cat).slice(0, 8);
     panel.classList.remove('swap'); void panel.offsetWidth; panel.classList.add('swap');
     panel.innerHTML = list.map(card).join('');
   }
@@ -205,7 +212,7 @@
     });
   });
   $$('[data-tab-link]').forEach((a) => a.addEventListener('click', () => showTab(a.dataset.tabLink)));
-  showTab('Feminino');
+  showTab('Masculino');
 
   /* ---------- Catálogo completo (escondido) ---------- */
   const catalog = $('#catalogo'), openBtn = $('#open-catalog');
@@ -267,10 +274,10 @@
   /* ---------- Seletor de maré ---------- */
   const tide = $('#mare'), range = $('#tide-range');
   const mares = [
-    { familia: 'Fresco', nome: 'Brisa', cor: '#9fd9d6', fundo: '#3fa7ae', texto: 'Cítricos, notas marinhas e verdes. Para dias claros e pele leve.', cta: 'Ver todos os frescos' },
-    { familia: 'Floral', nome: 'Jardim', cor: '#f1c3c8', fundo: '#c98593', texto: 'Jasmim, flor de laranjeira e rosa. Delicadeza que fica por perto.', cta: 'Ver todos os florais' },
-    { familia: 'Amadeirado', nome: 'Profundidade', cor: '#d8c1a3', fundo: '#8d6b55', texto: 'Cedro, sândalo e vetiver. Presença calma, sem pressa.', cta: 'Ver todos os amadeirados' },
-    { familia: 'Oriental', nome: 'Âmbar', cor: '#e7bb84', fundo: '#a8653f', texto: 'Âmbar, baunilha e especiarias. Calor que abraça à noite.', cta: 'Ver todos os orientais' }
+    { familia: 'Fresco', nome: 'Brisa', cor: '#a9cfd6', fundo: '#3d7f8f', texto: 'Cítricos, notas marinhas e verdes. Para dias claros e pele leve.', cta: 'Ver todos os frescos' },
+    { familia: 'Floral', nome: 'Jardim', cor: '#e5c3bd', fundo: '#a9736b', texto: 'Jasmim, flor de laranjeira e rosa. Delicadeza que fica por perto.', cta: 'Ver todos os florais' },
+    { familia: 'Amadeirado', nome: 'Profundidade', cor: '#c9ad88', fundo: '#6b4f3a', texto: 'Cedro, sândalo e vetiver. Presença calma, sem pressa.', cta: 'Ver todos os amadeirados' },
+    { familia: 'Oriental', nome: 'Âmbar', cor: '#d9a866', fundo: '#8a5228', texto: 'Âmbar, baunilha e especiarias. Calor que abraça à noite.', cta: 'Ver todos os orientais' }
   ];
   let lastFam = '';
   function updateTide() {
@@ -298,7 +305,7 @@
   const camadas = [
     { tempo: 'Primeiros 15 minutos', titulo: 'A primeira impressão', texto: 'É o que você sente assim que borrifa. Costumam ser notas leves e brilhantes, como limão, bergamota e frutas. Passam rápido, por isso vale esperar um pouco antes de decidir.' },
     { tempo: 'De 30 minutos a algumas horas', titulo: 'A alma do perfume', texto: 'Quando a saída vai embora, aparece o coração: flores, especiarias e frutas mais suaves. É aqui que você descobre a personalidade da fragrância.' },
-    { tempo: 'O que fica até o fim do dia', titulo: 'A lembrança na pele', texto: 'As notas de fundo são as mais profundas, como baunilha, âmbar, madeiras e almíscar. São elas que fazem alguém dizer que você está cheirosa horas depois.' }
+    { tempo: 'O que fica até o fim do dia', titulo: 'A lembrança na pele', texto: 'As notas de fundo são as mais profundas, como baunilha, âmbar, madeiras e almíscar. São elas que fazem o seu perfume ser notado horas depois.' }
   ];
   const pyBtns = $$('.py-buttons button'), pyLayers = $$('.py-layer');
   function showLayer(i) {

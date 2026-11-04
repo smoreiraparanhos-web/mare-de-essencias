@@ -1,22 +1,24 @@
 /* Maré de Essências: identidade creme, nude, rosé e dourado. Formas arredondadas e arcos. */
 :root {
-  --cream: #fbf6f1;
-  --pearl: #f6ede6;
-  --blush: #f1e0d8;
-  --nude: #e8cfc3;
-  --rose: #d49a9b;
-  --rose-deep: #a8606d;
-  --mauve: #7c4a57;
-  --gold: #c39a5f;
-  --gold-soft: #e6cfa6;
-  --ink: #3d2a30;
-  --muted: #7d666b;
-  --line: #e6d6cd;
-  --sea: #8fc9c6;
-  --radius: 26px;
-  --shadow: 0 18px 50px -24px rgba(124, 74, 87, .35);
+  --cream: #f4f1eb;
+  --pearl: #ebe6dd;
+  --blush: #e2dccf;
+  --nude: #d3c9b8;
+  --rose: #c7a56f;
+  --rose-deep: #9a7440;
+  --mauve: #1e2b3a;
+  --gold: #b8935a;
+  --gold-soft: #dcc394;
+  --ink: #17191d;
+  --muted: #676b72;
+  --line: #ddd6ca;
+  --sea: #6f9aa6;
+  --night: #121418;
+  --night-2: #1c1f24;
+  --radius: 16px;
+  --shadow: 0 18px 50px -24px rgba(18, 20, 24, .45);
   --ease: cubic-bezier(.22, .7, .2, 1);
-  --display: 'Bodoni Moda', 'Didot', 'Times New Roman', serif;
+  --display: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --body: 'Jost', 'Segoe UI', sans-serif;
 }
 
@@ -429,4 +431,107 @@ dialog h2 { font-size: 42px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
   .js .reveal { opacity: 1; transform: none; }
+}
+
+
+/* ================================================================
+   Tema sóbrio: grafite, preto, dourado e areia. Cantos levemente arredondados.
+   ================================================================ */
+h1 em, h2 em { color: var(--gold); }
+.btn, .mini-btn, .field input, .field select, .search-form input { border-radius: 10px; }
+.btn { background: var(--ink); }
+.btn:hover { background: var(--gold); color: var(--night); }
+.link-btn { color: var(--rose-deep); }
+.chip { border-radius: 6px; color: var(--ink); }
+.tabs { border-radius: 14px; }
+.tabs button { border-radius: 10px; }
+.pick, .selected-item, .quick-item { border-radius: 12px; }
+dialog { border-radius: 18px; }
+.round-btn { border-radius: 12px; }
+
+/* Avisos e cabeçalho escuros */
+.announce { background: #0b0c0f; color: var(--gold-soft); }
+.header { background: rgba(18, 20, 24, .96); color: #eee8dd; }
+.header.scrolled { box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .8); }
+.logo-sub { color: #9b968d; }
+.logo-name i { color: var(--gold); }
+.nav a::after { background: var(--gold); }
+.icon-btn:hover { background: rgba(255, 255, 255, .08); }
+.bag-count { background: var(--gold); color: var(--night); }
+dialog .icon-btn:hover { background: var(--pearl); }
+
+/* Banner escuro com brilho dourado */
+.hero { border-radius: 22px; color: #f1ece2; background: var(--night); }
+.hero[data-theme="rose"] { background: radial-gradient(110% 90% at 75% 40%, #3a3f48 0%, #22252b 45%, #111317 100%); }
+.hero[data-theme="amber"] { background: radial-gradient(110% 90% at 75% 40%, #4a3522 0%, #2a1e14 45%, #120d09 100%); }
+.hero[data-theme="pearl"] { background: radial-gradient(110% 90% at 75% 40%, #2b4257 0%, #192838 45%, #0c131b 100%); }
+.hero .eyebrow, .slide[data-theme="amber"] .eyebrow, .slide[data-theme="pearl"] .eyebrow { color: var(--gold-soft); }
+.hero h1 em, .hero h2 em, .slide[data-theme="amber"] h2 em, .slide[data-theme="pearl"] h2 em { color: var(--gold-soft); }
+.slide-copy p { color: #bdb7ac; }
+.hero .btn { background: var(--gold); color: var(--night); box-shadow: 0 14px 30px -14px rgba(184, 147, 90, .7); }
+.hero .btn:hover { background: var(--gold-soft); }
+.hero .round-btn { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .18); color: #eee8dd; }
+.hero .round-btn:hover { background: var(--gold); color: var(--night); border-color: var(--gold); }
+.hero-dots button { background: rgba(255, 255, 255, .25); }
+.hero-dots button[aria-selected="true"] { background: var(--gold); }
+.halo { background: radial-gradient(circle, rgba(220, 190, 140, .32), rgba(220, 190, 140, 0) 66%); }
+.silk { border-top-color: rgba(220, 195, 148, .28); background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, 0) 60%); }
+.pedestal { border-radius: 50%; background: linear-gradient(180deg, #4a4f58, #1b1e22); box-shadow: 0 24px 40px -14px rgba(0, 0, 0, .8), inset 0 1px 0 rgba(255, 255, 255, .25); }
+.sparkle { background: var(--gold-soft); }
+.hero-caption { color: rgba(241, 236, 226, .65); }
+
+/* Famílias: cartões com cantos suaves, tons terrosos */
+.family-arch { border-radius: 18px; aspect-ratio: 4 / 5; }
+.fam-fresco { background: linear-gradient(170deg, #dfe9ea, #a9c6cc 60%, #6f9aa6); }
+.fam-fresco .f-fill-a { fill: #efe2a8; } .fam-fresco .f-fill-b { fill: #f8f1d2; } .fam-fresco .f-leaf { fill: #5f8f7a; }
+.fam-floral { background: linear-gradient(170deg, #ece2dc, #cdb3a9 60%, #9c7b70); }
+.fam-floral .f-fill-c { fill: #d9bf8f; } .fam-floral .f-leaf { fill: #7f8f6a; }
+.fam-madeira { background: linear-gradient(170deg, #e3d6c3, #b39676 60%, #6e543d); }
+.fam-madeira .f-leaf { fill: #7f8f6a; }
+.fam-oriental { background: linear-gradient(170deg, #e7d0ac, #b8854f 60%, #6f4422); }
+
+/* Cards */
+.product { border-radius: var(--radius); }
+.product-media { border-radius: 12px; }
+.fav { border-radius: 10px; }
+.fav svg, .link-btn svg { stroke: var(--ink); }
+.fav[aria-pressed="true"] svg, .link-btn[aria-pressed="true"] svg { fill: var(--gold); stroke: var(--gold); }
+
+/* Top 5 em fundo escuro */
+.top5 { background: var(--night); color: #eee8dd; }
+.top5 .section-head p { color: #a39e95; }
+.top-card { border-radius: var(--radius); background: linear-gradient(180deg, var(--night-2), #15171b); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06); }
+.top-card:hover { box-shadow: inset 0 0 0 1px rgba(220, 195, 148, .45); }
+.top-media { background: radial-gradient(circle at 50% 55%, rgba(220, 195, 148, .18) 0, rgba(220, 195, 148, 0) 62%); }
+.top-num { opacity: .75; color: var(--gold); font-style: normal; }
+.top5 .link-btn { color: var(--gold-soft); }
+.top5 .link-btn svg { stroke: var(--gold-soft); }
+
+/* Seletor de maré */
+.tide { border-radius: 22px; }
+.tg-body { border-radius: 40px 40px 26px 26px; }
+.tg-label { border-radius: 8px; color: var(--ink); }
+.tg-cap { border-radius: 6px 6px 2px 2px; background: linear-gradient(90deg, #2a2d33, #5a5f68 45%, #2a2d33); }
+.tg-neck { background: #8f7347; }
+
+/* Nossa história e chamada final */
+.story-arch { border-radius: 20px; background: radial-gradient(circle at 50% 42%, #4a4f58 0, #22252b 50%, #111317 100%); }
+.story-ring text { fill: var(--ink); }
+.final-inner { border-radius: 22px; background: radial-gradient(120% 120% at 20% 10%, #2f4458 0, #1a2735 45%, #0d141c 100%); color: #e9e4da; }
+.final p { color: #b9c1c9; }
+.btn-light { background: var(--gold); color: var(--night); }
+.btn-light:hover { background: var(--gold-soft); color: var(--night); }
+
+/* Rodapé escuro */
+.footer { background: var(--night); color: #d8d2c7; }
+.footer-brand p, .footer-col p, .footer-bottom { color: #8f8a82; }
+.footer-top { border-bottom-color: rgba(255, 255, 255, .1); }
+.footer-col a:hover { color: var(--gold-soft); }
+
+@media (max-width: 900px) {
+  .nav { background: var(--night); }
+}
+@media (max-width: 640px) {
+  .hero { border-radius: 18px; }
+  .tide { border-radius: 18px; }
 }

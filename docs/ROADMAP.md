@@ -35,3 +35,9 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Novas seções: guia com pirâmide olfativa interativa e intensidades, nossa história, chamada final para a seleção.
 - Removidos: abertura em canvas (`js/cinema.js`), estilos e scripts antigos.
 - Pendente: fotos reais com direito de uso (ou geradas com Higgsfield), preços reais, canal de atendimento, plataforma de vendas.
+
+## Edição 5: visual masculino para todos os públicos
+- Identidade trocada para grafite, preto, dourado e areia, com cantos levemente arredondados e Playfair Display nos títulos.
+- Cabeçalho, banner, Top 5 e rodapé escuros; textos sem linguagem feminina.
+- Nova aba e categoria Unissex; mais masculinos (Eros, Invictus, 212 VIP Men, Y) e unissex (Ombré Leather, Wood Sage & Sea Salt, Erba Pura). Total: 33 perfumes.
+- Coleções abrem em Masculinos por padrão.
