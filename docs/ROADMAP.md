@@ -25,3 +25,13 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Movimento leve no resto do site: faixa deslizante, ondas que se desenham ao rolar, bolhas no manifesto.
 - Movimento reduzido e sem JavaScript: a abertura vira uma capa estática com todo o texto.
 - Pendente: imagens reais licenciadas; avaliar vídeo gerado para a abertura quando houver ferramenta de geração conectada.
+
+## Edição 4: loja feminina
+- Site refeito do zero com estrutura de perfumaria online e identidade própria: creme, nude, rosé e dourado, formas arredondadas e em arco, Bodoni Moda e Jost.
+- Banner em carrossel (3 destaques), famílias olfativas em arcos, "Os mais amados" (trilho com setas), "Top 5 da curadoria", coleções em abas (Femininos, Masculinos, Árabes, Nicho).
+- 26 perfumes reais de mercado com notas principais e "preço sob consulta". Frascos ilustrados em SVG, com campo `foto` pronto para imagens reais.
+- Catálogo completo escondido, aberto por botão, famílias ou busca rápida.
+- Seletor de maré mantido e ampliado: muda a cor do frasco e sugere perfumes da família.
+- Novas seções: guia com pirâmide olfativa interativa e intensidades, nossa história, chamada final para a seleção.
+- Removidos: abertura em canvas (`js/cinema.js`), estilos e scripts antigos.
+- Pendente: fotos reais com direito de uso (ou geradas com Higgsfield), preços reais, canal de atendimento, plataforma de vendas.
