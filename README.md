@@ -21,3 +21,6 @@ Em `js/loja.js`, adicione o arquivo ao objeto `fotos` (id do produto, nome do ar
 
 ## Para vender perfumes de verdade
 Confirmar fornecedores e autorização de revenda, estoque e preços; obter fotos com direito de uso; integrar uma plataforma de e-commerce confiável com checkout, frete, pagamentos, pedidos e políticas de privacidade e devolução; validar obrigações fiscais e legais. Não coletar cartão diretamente neste frontend.
+
+## Atualizar o site sem visual quebrado
+Ao mudar `css/loja.css` ou `js/loja.js`, aumente o número `?v=` nos links do `index.html` (ex.: `?v=12`). Isso obriga o navegador a baixar o arquivo novo em vez de usar uma cópia antiga guardada.
