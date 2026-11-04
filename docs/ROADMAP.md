@@ -56,7 +56,8 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - 9 fundos da loja em `assets/fundos/` (versão grande e versão `-p` para celular): banner (pedra com arco, âmbar no mar, cristal violeta), famílias (limão, flor, pedra, âmbar), maré (onda japonesa), história (seda rosada), chamada final (praia).
 - Originais em PNG retirados da raiz do projeto para não pesar o site (continuam no histórico do Git).
 - Banner 2 passou a destacar Orientais (há poucos árabes com foto).
-- A confirmar com a loja: marca de The Blend (cadastrado como O Boticário); fotos de Paradoxe e Homem Sagaz; notas dos nacionais (Natura, Eudora, O Boticário); direito de uso das fotos; se o catálogo fica só com os perfumes da loja.
+- Confirmado com a loja: Attar Al Wesal é da Al Wataniah e The Blend é do O Boticário.
+- A confirmar com a loja: notas dos nacionais (Natura, Eudora, O Boticário); direito de uso das fotos; se o catálogo fica só com os perfumes da loja.
 
 ## Edição 8: fundos de seção e fotos inteiras
 - Recortes removidos. Fotos dos perfumes ocupam o quadro inteiro (5:8); frascos altos aparecem inteiros, sem corte.
@@ -73,6 +74,6 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Removidos: camada de movimento (`js/vida.js`), faixas deslizando, poeira, névoa, inclinação 3D, borrifadas, barra de progresso.
 
 ## Edição 10: novos perfumes
-- Com foto: Paradoxe, Homem Sagaz, Attar Al Wesal (Al Wataniah, a confirmar), Hawas for Him, Mercedes-Benz Select, Montblanc Individuel, Montblanc Starwalker, Nautica Voyage, Stella Dustin Homme Sport. Fotos de Phantom, Sauvage, Scandal, Sì e The Blend trocadas pelas versões originais.
+- Com foto: Paradoxe, Homem Sagaz, Attar Al Wesal (Al Wataniah), Hawas for Him, Mercedes-Benz Select, Montblanc Individuel, Montblanc Starwalker, Nautica Voyage, Stella Dustin Homme Sport. Fotos de Phantom, Sauvage, Scandal, Sì e The Blend trocadas pelas versões originais.
 - Fotos quadradas aproximadas para o frasco ficar em destaque; fotos largas mostradas inteiras.
 - Arquivos enviados na raiz convertidos para `assets/produtos/` e retirados da raiz.
