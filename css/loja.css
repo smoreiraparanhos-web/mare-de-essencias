@@ -759,3 +759,123 @@ dialog .icon-btn:hover { background: var(--pearl); }
 .product .mini-btn:hover, .product .mini-btn[aria-pressed="true"] { color: var(--cream); }
 .product-media .bottle-svg { width: 52%; }
 .product-media .photo.fit, .top-media .photo.fit { object-fit: contain; }
+
+/* ================================================================
+   Edição 9: modelo editorial (base: "Nossa história").
+   Fundo nítido de ponta a ponta, painel de vidro com o texto e foto em moldura.
+   Sem carrossel, sem trocas automáticas e com poucas animações.
+   ================================================================ */
+.announce { text-align: center; }
+.announce p { margin: 0; padding: 10px 5%; font-size: 12px; letter-spacing: .16em; }
+
+.editorial, .editorial-light { position: relative; isolation: isolate; overflow: hidden; }
+.editorial { color: #f1ece2; }
+.ed-bg { position: absolute; inset: 0; z-index: -2; background: var(--bg) center / cover no-repeat; }
+.ed-shade { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.shade-hero { background: linear-gradient(90deg, rgba(10, 11, 14, .7) 0%, rgba(10, 11, 14, .35) 50%, rgba(10, 11, 14, .1) 100%); }
+.shade-story { background: linear-gradient(90deg, rgba(10, 11, 14, .2) 0%, rgba(10, 11, 14, .4) 45%, rgba(10, 11, 14, .75) 100%); }
+.shade-final { background: rgba(10, 11, 14, .45); }
+.shade-tide { background: linear-gradient(90deg, rgba(244, 241, 235, .9) 0%, rgba(244, 241, 235, .7) 50%, rgba(244, 241, 235, .2) 100%); }
+.editorial .eyebrow { color: var(--gold-soft); }
+.editorial h1 em, .editorial h2 em { color: var(--gold-soft); }
+
+.ed-panel {
+  padding: clamp(30px, 4vw, 54px); border-radius: 20px;
+  background: rgba(14, 15, 18, .52); border: 1px solid rgba(255, 255, 255, .12);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.ed-panel p { color: rgba(241, 236, 226, .84); }
+.ed-frame {
+  margin: 0; width: min(340px, 72vw); padding: 12px 12px 16px; border-radius: 18px;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(220, 195, 148, .45);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 40px 70px -25px rgba(0, 0, 0, .7);
+}
+.ed-frame img { display: block; width: 100%; aspect-ratio: 5 / 8; object-fit: cover; border-radius: 10px; }
+.ed-frame figcaption { display: grid; gap: 2px; padding: 12px 4px 0; }
+.ed-frame figcaption b { font: 400 20px/1.2 var(--display); color: #f6f1e8; }
+.ed-frame .brand { color: var(--gold-soft); }
+
+/* Banner */
+.hero-ed { padding: clamp(70px, 8vw, 120px) 7%; }
+.ed-inner { display: grid; grid-template-columns: minmax(0, 640px) auto; justify-content: space-between; align-items: center; gap: clamp(30px, 6vw, 90px); max-width: 1320px; margin: 0 auto; }
+.hero-ed h1 { font-size: clamp(44px, 5.4vw, 82px); line-height: 1.04; margin: 18px 0 20px; }
+.ed-lead { font-size: 17px; line-height: 1.75; max-width: 46ch; }
+.ed-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0 34px; }
+.btn-gold { background: var(--gold); color: var(--night); }
+.btn-gold:hover { background: var(--gold-soft); color: var(--night); }
+.btn-ghost { background: transparent; color: #f1ece2; border: 1px solid rgba(241, 236, 226, .45); box-shadow: none; }
+.btn-ghost:hover { background: rgba(241, 236, 226, .1); color: #fff; }
+.ed-facts { list-style: none; margin: 0; padding: 22px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; border-top: 1px solid rgba(220, 195, 148, .35); }
+.ed-facts li { display: grid; gap: 4px; }
+.ed-facts b { font-weight: 500; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-soft); }
+.ed-facts span { font-size: 13px; color: rgba(241, 236, 226, .75); line-height: 1.5; }
+
+/* Marcas: lista fixa e organizada */
+.brands { margin: 0; padding: 26px 5%; border-block: 1px solid var(--line); mask-image: none; display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; background: var(--cream); }
+.brands-label { font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+.brands-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 26px; }
+.brands-list li { font: italic 400 19px var(--display); color: var(--ink); opacity: .75; }
+
+/* Famílias: quatro cartões com foto nítida */
+.families { padding-block: clamp(80px, 10vw, 130px); }
+.fam-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 1320px; margin: 0 auto; }
+.fam-card { position: relative; display: block; aspect-ratio: 3 / 4; border-radius: 18px; overflow: hidden; color: #f6f1e8; box-shadow: var(--shadow); transition: transform .5s var(--ease), box-shadow .5s; }
+.fam-card:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -28px rgba(18, 20, 24, .6); }
+.fam-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.fam-card-body { position: absolute; left: 12px; right: 12px; bottom: 12px; display: grid; gap: 6px; padding: 18px 18px 16px; border-radius: 14px; background: rgba(14, 15, 18, .55); border: 1px solid rgba(255, 255, 255, .12); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.fam-card .family-name { font: 400 26px/1.1 var(--display); }
+.fam-card .family-notes { font-size: 13px; line-height: 1.55; color: rgba(241, 236, 226, .8); }
+.fam-card .fam-go { margin-top: 6px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-soft); }
+
+/* Seções de produto com fundo liso (sem imagem esticada) */
+.loved { background: var(--cream); }
+.top5 { background: var(--night); color: #eee8dd; }
+.top5 .top-card { background: var(--night-2); backdrop-filter: none; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08); }
+.collections { background: var(--pearl); }
+.collections .tabs { background: #fff; }
+
+/* Maré no modelo editorial claro */
+.tide.editorial-light { margin: 0; border-radius: 0; background: none; padding: clamp(80px, 9vw, 130px) 7%; }
+.tide.editorial-light .tide-copy { padding: clamp(28px, 3.5vw, 48px); border-radius: 20px; background: rgba(255, 255, 255, .72); border: 1px solid rgba(255, 255, 255, .8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.tide.editorial-light::before { display: none; }
+
+/* Nossa história e chamada final */
+.story.editorial { background: none; padding: clamp(90px, 10vw, 140px) 7%; }
+.story.editorial .story-copy { padding: clamp(30px, 4vw, 54px); }
+.story-ring { animation: none; }
+.final.editorial { padding: clamp(100px, 12vw, 160px) 7%; }
+.final .final-inner { max-width: 760px; margin: 0 auto; text-align: center; color: #f1ece2; }
+
+/* Menos movimento e menos detalhes */
+.mist, .product::before, .product-media::after, .section-head::after { display: none; }
+.product:hover, .top-card:hover { transform: translateY(-4px); transition: transform .4s var(--ease), box-shadow .4s; }
+.product:hover .product-media .photo, .product:hover .product-media .bottle-svg { transform: none; }
+.tg-bubble { display: none; }
+.rail { cursor: auto; }
+
+@media (max-width: 1100px) {
+  .fam-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .ed-inner { grid-template-columns: 1fr; justify-items: center; }
+  .ed-panel { width: 100%; }
+  .ed-frame { width: min(260px, 64vw); }
+  .shade-hero, .shade-story { background: rgba(10, 11, 14, .5); }
+  .shade-tide { background: rgba(244, 241, 235, .78); }
+}
+@media (max-width: 640px) {
+  .hero-ed { padding: 40px 5% 60px; }
+  .ed-facts { grid-template-columns: 1fr; gap: 12px; }
+  .ed-actions .btn { flex: 1 1 100%; justify-content: center; }
+  .fam-cards { grid-template-columns: 1fr; }
+  .fam-card { aspect-ratio: 4 / 3; }
+  .brands-list li { font-size: 16px; }
+  .tide.editorial-light, .story.editorial { padding: 60px 5%; }
+}
+.btn.btn-outline { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.btn.btn-outline:hover { background: var(--ink); color: var(--cream); }
+.hero-ed h1 { font-size: clamp(40px, 4.6vw, 68px); }
+.rail-btn { background: #fff; color: var(--ink); border-color: var(--line); }
+.top-num { top: 14px; left: 18px; font-size: 30px; opacity: 1; }
+.top-media { margin-top: 34px; }

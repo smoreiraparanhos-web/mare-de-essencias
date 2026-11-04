@@ -63,3 +63,11 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Fundos da loja agora são fundos de seção, de ponta a ponta, com parallax: banner (pedra, âmbar, cristal violeta), famílias (o fundo troca com a família em foco: limão, flor, pedra, âmbar), mais amados (praia), Top 5 (cristal violeta), maré (onda japonesa), coleções (seda rosada), história (âmbar no mar), chamada final (pedra com arco).
 - Banner de ponta a ponta com cartão de vidro mostrando o produto em foto.
 - Novos com foto: Lattafa Asad, Clash (O Boticário), The Blend.
+
+## Edição 9: modelo editorial, mais calmo e organizado
+- Base visual: a seção "Nossa história" (fundo de ponta a ponta, painel de vidro com texto e foto em moldura) aplicada ao banner, à maré e à chamada final.
+- Banner fixo, sem carrossel, com textos novos e três destaques (para todos, curadoria, atendimento).
+- Famílias em quatro cartões com foto nítida, sem números e sem troca automática.
+- Seções de produto (mais amados, Top 5, coleções) com fundo liso, para não ampliar imagens.
+- Fundos exportados em qualidade máxima no tamanho original; versões ampliadas e para celular removidas.
+- Removidos: camada de movimento (`js/vida.js`), faixas deslizando, poeira, névoa, inclinação 3D, borrifadas, barra de progresso.

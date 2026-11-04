@@ -200,45 +200,13 @@
     syncFavs();
   });
 
-  /* ---------- Banner em carrossel ---------- */
-  $$('.slide-art').forEach((el) => {
-    if (el.dataset.tile) {
-      const p = byId(el.dataset.tile);
-      el.innerHTML = `<figure class="hero-tile" style="--photo-bg:${p.fundo}">
-          <div class="hero-tile-photo"><span class="photo-fill" aria-hidden="true" style="background-image:url(${p.foto})"></span><img src="${p.foto}" alt="Frasco de ${p.nome}, ${p.marca}" decoding="async"></div>
-          <figcaption><span class="brand">${p.marca}</span><b>${p.nome}</b><span class="hero-tile-notes">${p.notas}</span></figcaption>
-        </figure>`;
-      return;
-    }
-    if (!el.dataset.bottle) return;
-    const a = byId(el.dataset.bottle), b = byId(el.dataset.bottleB);
-    el.innerHTML = `<span class="halo"></span><span class="silk silk-a"></span><span class="silk silk-b"></span>
-      <span class="pedestal"></span>
-      <div class="hero-bottle back">${bottleSVG(b)}</div>
-      <div class="hero-bottle front">${bottleSVG(a)}</div>
-      <span class="sparkle" style="--x:18%;--y:24%"></span><span class="sparkle" style="--x:82%;--y:18%;--dl:-1.2s"></span><span class="sparkle" style="--x:74%;--y:70%;--dl:-2.4s"></span>
-      <span class="hero-caption">${a.nome} <i>·</i> ${a.marca}</span>`;
+  /* ---------- Molduras com foto de produto (banner e seções editoriais) ---------- */
+  $$('[data-frame]').forEach((el) => {
+    const p = byId(el.dataset.frame);
+    if (!p || !p.foto) return;
+    el.innerHTML = `<img src="${p.foto}" alt="Frasco de ${p.nome}, ${p.marca}" decoding="async"${el.dataset.eager ? '' : ' loading="lazy"'}>
+      <figcaption><span class="brand">${p.marca}</span><b>${p.nome}</b></figcaption>`;
   });
-
-  const slides = $$('.slide'), dots = $$('.hero-dots button');
-  let current = 0, timer = null;
-  function go(i) {
-    current = (i + slides.length) % slides.length;
-    slides.forEach((s, k) => { s.classList.toggle('is-current', k === current); s.setAttribute('aria-hidden', k !== current); s.inert = k !== current; });
-    dots.forEach((d, k) => d.setAttribute('aria-selected', k === current));
-    document.querySelector('.hero').dataset.theme = slides[current].dataset.theme;
-  }
-  function auto() { stopAuto(); if (!reduceMotion.matches) timer = setInterval(() => go(current + 1), 6500); }
-  function stopAuto() { clearInterval(timer); }
-  $('[data-hero="prev"]').addEventListener('click', () => { go(current - 1); auto(); });
-  $('[data-hero="next"]').addEventListener('click', () => { go(current + 1); auto(); });
-  dots.forEach((d, k) => d.addEventListener('click', () => { go(k); auto(); }));
-  const hero = $('.hero');
-  hero.addEventListener('mouseenter', stopAuto);
-  hero.addEventListener('mouseleave', auto);
-  hero.addEventListener('focusin', stopAuto);
-  hero.addEventListener('focusout', auto);
-  go(0); auto();
 
   /* ---------- Os mais amados ---------- */
   $('#loved-rail').innerHTML = maisAmados.map((id) => card(byId(id))).join('');

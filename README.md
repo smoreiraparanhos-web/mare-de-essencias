@@ -9,13 +9,12 @@ Rode um servidor local na pasta do projeto (`npx http-server`) e abra o endereç
 - `index.html`: seções e textos.
 - `css/loja.css`: identidade visual (grafite, dourado e areia; fontes; formas) e layout. O bloco "Tema sóbrio" no fim do arquivo concentra as cores escuras.
 - `js/loja.js`: lista de produtos, carrossel, coleções, catálogo, busca, seletor de maré, pirâmide olfativa e seleção.
-- `js/vida.js`: camada de movimento (poeira, parallax, títulos animados, inclinação 3D dos cartões, barra de progresso).
 - `docs/BRIEFING.md`: dados da marca e operação comercial.
 - `CLAUDE.md`: instruções para evolução com Claude Code.
 
 ## Imagens
 - `assets/produtos/`: fotos dos perfumes (webp) e recortes sem fundo (`*-recorte.webp`).
-- `assets/fundos/`: fundos das seções; arquivos `-p` são a versão leve para celular.
+- `assets/fundos/`: fundos das seções no tamanho original (1672x941). Use só em seções de altura moderada para não ampliar a imagem.
 
 ## Trocar ilustrações por fotos reais
 Em `js/loja.js`, adicione o arquivo ao objeto `fotos` (id do produto, nome do arquivo em `assets/produtos/` e cor do fundo da foto). Use fotos com fundo claro ou transparente e direito de uso.
