@@ -64,15 +64,36 @@
     P(43, 'Club 6 Intenso', 'Eudora', 'Masculino', 'Amadeirado', 'Notas em breve', 'classic', '#2a2a2a', '#c0c4c9'),
     P(44, 'Homem Cor.agio', 'Natura', 'Masculino', 'Amadeirado', 'Notas em breve', 'square', '#4a4a4e', '#1c1c1f'),
     P(45, 'Invictus Victory', 'Paco Rabanne', 'Masculino', 'Oriental', 'Lavanda · Baunilha · Âmbar', 'round', '#1c1c1f', '#1c1c1f'),
-    P(46, 'Impression In Black', 'Eudora', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#1e1e20', '#1c1c1f')
+    P(46, 'Impression In Black', 'Eudora', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#1e1e20', '#1c1c1f'),
+    P(47, "L'Interdit", 'Givenchy', 'Feminino', 'Floral', 'Flor de laranjeira · Jasmim · Patchouli', 'round', '#f3c9a8', '#1c1c1f'),
+    P(48, 'Club 6 Exclusive', 'Eudora', 'Masculino', 'Oriental', 'Notas em breve', 'classic', '#a8741e', '#c9a26b'),
+    P(49, 'Malbec Magnetic', 'O Boticário', 'Masculino', 'Amadeirado', 'Notas em breve', 'tall', '#c0c4c9', '#1c1c1f')
   ];
 
   /* Fotos reais: id -> [arquivo, cor do fundo da foto]. */
   const fotos = {
+    1: ['la-vie-est-belle.webp', '#f7f1ec'],
+    2: ['good-girl.webp', '#faf5ef'],
+    3: ['jadore.webp', '#f5eee8'],
+    4: ['coco-mademoiselle.webp', '#f5efea'],
+    5: ['libre.webp', '#f6efe9'],
+    11: ['light-blue.webp', '#f7f3ee'],
+    12: ['gucci-bloom.webp', '#faf5ef'],
     13: ['sauvage-edp.webp', '#e2dcd5'],
     34: ['phantom.webp', '#e7e0d8'],
     35: ['scandal.webp', '#f4eee8'],
-    36: ['si.webp', '#f6f1e9']
+    36: ['si.webp', '#f6f1e9'],
+    39: ['bright-crystal.webp', '#faf5ef'],
+    40: ['botica-214-verano.webp', '#e1ddda'],
+    41: ['alien.webp', '#f8f1eb'],
+    42: ['for-her.webp', '#f7f3f0'],
+    43: ['club-6-intenso.webp', '#dcd5d0'],
+    44: ['homem-coragio.webp', '#e0dbd5'],
+    45: ['invictus-victory.webp', '#d9d2cc'],
+    46: ['impression-in-black.webp', '#e0dcd3'],
+    47: ['linterdit.webp', '#f6f0ea'],
+    48: ['club-6-exclusive.webp', '#ded7d1'],
+    49: ['malbec-magnetic.webp', '#e9e6e1']
   };
   Object.entries(fotos).forEach(([id, [arq, fundo]]) => {
     const p = produtos.find((x) => x.id === Number(id));
@@ -81,8 +102,8 @@
   /* Produtos com foto aparecem primeiro nas listas. */
   const comFotoPrimeiro = (a, b) => (b.foto ? 1 : 0) - (a.foto ? 1 : 0);
   const byId = (id) => produtos.find((p) => p.id === Number(id));
-  const maisAmados = [13, 35, 34, 36, 1, 14, 19, 10, 2, 45];
-  const top5 = [13, 35, 10, 36, 34];
+  const maisAmados = [13, 1, 45, 2, 4, 34, 3, 47, 43, 41];
+  const top5 = [13, 1, 45, 4, 2];
 
   /* ---------- Cores ---------- */
   const hex = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
@@ -174,6 +195,14 @@
 
   /* ---------- Banner em carrossel ---------- */
   $$('.slide-art').forEach((el) => {
+    if (el.dataset.cut) {
+      const p = byId(el.dataset.product);
+      el.innerHTML = `<span class="halo"></span><img class="hero-cut" src="${el.dataset.cut}" alt="Frasco de ${p.nome}, ${p.marca}" decoding="async">
+        <span class="sparkle" style="--x:18%;--y:24%"></span><span class="sparkle" style="--x:82%;--y:18%;--dl:-1.2s"></span>
+        <span class="hero-caption">${p.nome} <i>·</i> ${p.marca}</span>`;
+      return;
+    }
+    if (!el.dataset.bottle) return;
     const a = byId(el.dataset.bottle), b = byId(el.dataset.bottleB);
     el.innerHTML = `<span class="halo"></span><span class="silk silk-a"></span><span class="silk silk-b"></span>
       <span class="pedestal"></span>

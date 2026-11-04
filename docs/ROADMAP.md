@@ -50,8 +50,10 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Tudo desliga com "reduzir movimento"; efeitos de mouse só em telas com mouse.
 - Próximo passo para ainda mais vida: fotos e vídeo realistas (Higgsfield ou fotos com direito de uso).
 
-## Edição 7: fotos reais (em andamento)
-- Fotos da loja em `assets/produtos/` (webp, 1000px de altura). Cards em 3:4 com fundo na cor da foto e bordas suavizadas.
-- Com foto: Sauvage Eau de Parfum, Phantom, Scandal, Sì. Produtos com foto aparecem primeiro nas listas.
-- Cadastrados aguardando arquivo: Good Girl, La Vie Est Belle, Libre, Paradoxe, Homem Sagaz, Bright Crystal, Botica 214 Verano en Firenze, Alien, For Her, Club 6 Intenso, Coco Mademoiselle, Homem Cor.agio, J'adore, Invictus Victory, Bloom, Impression In Black, Light Blue.
-- A confirmar com a loja: notas dos nacionais (Natura, Eudora, O Boticário), dois frascos sem rótulo, direito de uso das fotos e se o catálogo fica só com os perfumes da loja.
+## Edição 7: fotos e fundos da loja
+- 24 perfumes com foto real em `assets/produtos/` (webp, 1000px de altura). Cards em 3:4 com fundo na cor da foto e bordas suavizadas; produtos com foto aparecem primeiro.
+- Recortes sem fundo (Sauvage, L'Interdit, Invictus Victory) para o banner e a seção "Nossa história".
+- 9 fundos da loja em `assets/fundos/` (versão grande e versão `-p` para celular): banner (pedra com arco, âmbar no mar, cristal violeta), famílias (limão, flor, pedra, âmbar), maré (onda japonesa), história (seda rosada), chamada final (praia).
+- Originais em PNG retirados da raiz do projeto para não pesar o site (continuam no histórico do Git).
+- Banner 2 passou a destacar Orientais (há poucos árabes com foto).
+- A confirmar com a loja: nome dos frascos "armaf" e "clash" e do frasco cor de cobre; fotos de Paradoxe e Homem Sagaz; notas dos nacionais (Natura, Eudora, O Boticário); direito de uso das fotos; se o catálogo fica só com os perfumes da loja.

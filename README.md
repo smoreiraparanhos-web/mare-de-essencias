@@ -13,8 +13,12 @@ Rode um servidor local na pasta do projeto (`npx http-server`) e abra o endereç
 - `docs/BRIEFING.md`: dados da marca e operação comercial.
 - `CLAUDE.md`: instruções para evolução com Claude Code.
 
+## Imagens
+- `assets/produtos/`: fotos dos perfumes (webp) e recortes sem fundo (`*-recorte.webp`).
+- `assets/fundos/`: fundos das seções; arquivos `-p` são a versão leve para celular.
+
 ## Trocar ilustrações por fotos reais
-Em `js/loja.js`, cada produto tem um último campo opcional `foto`. Coloque a imagem em `assets/produtos/` e informe o caminho, por exemplo `'assets/produtos/sauvage.webp'`. Use fotos com fundo claro ou transparente e direito de uso.
+Em `js/loja.js`, adicione o arquivo ao objeto `fotos` (id do produto, nome do arquivo em `assets/produtos/` e cor do fundo da foto). Use fotos com fundo claro ou transparente e direito de uso.
 
 ## Para vender perfumes de verdade
 Confirmar fornecedores e autorização de revenda, estoque e preços; obter fotos com direito de uso; integrar uma plataforma de e-commerce confiável com checkout, frete, pagamentos, pedidos e políticas de privacidade e devolução; validar obrigações fiscais e legais. Não coletar cartão diretamente neste frontend.

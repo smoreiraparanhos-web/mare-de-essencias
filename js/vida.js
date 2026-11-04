@@ -44,7 +44,8 @@
   const bar = $('.progress');
   const layers = [
     ...$$('.family-arch svg').map((el) => ({ el, k: -0.06 })),
-    ...$$('.story-bottle').map((el) => ({ el, k: -0.1 })),
+    ...$$('.story-bottle, .story-cut').map((el) => ({ el, k: -0.1 })),
+    ...$$('.family-arch img').map((el) => ({ el, k: -0.05 })),
     ...$$('.tide-glass').map((el) => ({ el, k: -0.05 })),
     ...$$('.story-ring').map((el) => ({ el, k: 0.12 })),
     ...$$('.top-media').map((el, i) => ({ el, k: i % 2 ? -0.05 : 0.05 }))

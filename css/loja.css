@@ -604,6 +604,65 @@ dialog .icon-btn:hover { background: var(--pearl); }
 .product-media .photo, .top-media .photo { -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent), linear-gradient(180deg, transparent, #000 4%, #000 96%, transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent), linear-gradient(180deg, transparent, #000 4%, #000 96%, transparent); mask-composite: intersect; }
 .top-num { z-index: 2; text-shadow: none; }
 
+/* ================================================================
+   Fundos da loja (assets/fundos)
+   ================================================================ */
+/* Banner com foto de fundo e frasco recortado */
+.slide.has-bg::before {
+  content: ''; position: absolute; inset: -4%; z-index: 0; pointer-events: none;
+  background: var(--bg) center / cover no-repeat;
+  transform: scale(1.08) translate3d(calc(var(--px, 0) * 14px), calc(var(--py, 0) * 10px), 0);
+  transition: transform 7s ease-out;
+}
+.slide.has-bg.is-current::before { transform: scale(1) translate3d(calc(var(--px, 0) * 14px), calc(var(--py, 0) * 10px), 0); }
+.slide.has-bg::after {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(10, 11, 14, .86) 0%, rgba(10, 11, 14, .55) 38%, rgba(10, 11, 14, .1) 70%, rgba(10, 11, 14, .25) 100%);
+}
+.slide.has-bg .slide-copy, .slide.has-bg .slide-art { position: relative; z-index: 1; }
+.hero:has(.slide.has-bg) .hero-mist { opacity: .5; }
+.slide-art .hero-cut {
+  position: absolute; left: 50%; bottom: 9%; height: 82%; width: auto; max-width: 80%; object-fit: contain;
+  transform: translate(-50%, 24px); opacity: 0; filter: drop-shadow(0 30px 30px rgba(0, 0, 0, .55));
+  transition: transform 1.3s var(--ease), opacity 1.3s;
+}
+.slide.is-current .slide-art .hero-cut { transform: translate(-50%, 0); opacity: 1; animation: float 8s ease-in-out 1.4s infinite; }
+.slide[data-theme="rose"] .slide-art .hero-cut { left: 62%; bottom: 16%; height: 72%; }
+.slide-art-empty { pointer-events: none; }
+
+/* Famílias com foto */
+.family-arch.has-img { position: relative; background: var(--night); }
+.family-arch.has-img img { position: absolute; inset: -8% 0; width: 100%; height: 116%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.family:hover .family-arch.has-img img { transform: scale(1.07); }
+.family-arch.has-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(10, 11, 14, .35)); pointer-events: none; }
+
+/* Maré com a onda japonesa ao fundo */
+.tide.has-bg::before {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: var(--bg) right center / cover no-repeat; opacity: .14; filter: saturate(.7);
+  -webkit-mask-image: linear-gradient(90deg, transparent 15%, #000 70%); mask-image: linear-gradient(90deg, transparent 15%, #000 70%);
+}
+.tide.has-bg { background: linear-gradient(135deg, rgba(255, 255, 255, .92), color-mix(in srgb, var(--tide) 25%, #f4f1eb)); }
+
+/* Nossa história: seda rosada com o frasco */
+.story-arch.has-bg { background: var(--bg) center / cover no-repeat; overflow: hidden; }
+.story-arch.has-bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 60%, rgba(0, 0, 0, 0) 30%, rgba(40, 20, 24, .25)); }
+.story-cut { position: relative; z-index: 1; width: 46%; filter: drop-shadow(0 30px 28px rgba(40, 20, 24, .45)); animation: float 8s ease-in-out infinite; }
+
+/* Chamada final com a praia ao fundo */
+.final-inner.has-bg { background: linear-gradient(180deg, rgba(10, 12, 16, .55), rgba(10, 12, 16, .8)), var(--bg) center / cover no-repeat; }
+
+@media (max-width: 900px) {
+  .slide.has-bg::before { background-image: var(--bg-p); }
+  .slide.has-bg::after { background: linear-gradient(180deg, rgba(10, 11, 14, .15) 0%, rgba(10, 11, 14, .55) 40%, rgba(10, 11, 14, .88) 100%); }
+  .slide-art .hero-cut, .slide[data-theme="rose"] .slide-art .hero-cut { left: 50%; height: 88%; bottom: 4%; }
+  .tide.has-bg::before, .story-arch.has-bg, .final-inner.has-bg { background-image: var(--bg-p); }
+  .final-inner.has-bg { background: linear-gradient(180deg, rgba(10, 12, 16, .55), rgba(10, 12, 16, .8)), var(--bg-p) center / cover no-repeat; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slide.has-bg::before { transform: none; }
+}
+
 @media (max-width: 900px) {
   .nav { background: var(--night); }
 }

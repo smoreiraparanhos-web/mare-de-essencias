@@ -62,32 +62,32 @@
   <!-- Banner principal em carrossel -->
   <section class="hero" aria-roledescription="carrossel" aria-label="Destaques">
     <div class="hero-slides">
-      <article class="slide is-current" data-theme="rose" aria-roledescription="slide" aria-label="1 de 3">
+      <article class="slide is-current has-bg" data-theme="rose" style="--bg:url(../assets/fundos/marmore-arco.webp);--bg-p:url(../assets/fundos/marmore-arco-p.webp)" aria-roledescription="slide" aria-label="1 de 3">
         <div class="slide-copy">
           <span class="eyebrow">Perfumaria para todos os estilos</span>
           <h1>Presença<br><em>que fica.</em></h1>
           <p>Masculinos, femininos e unissex escolhidos para marcar o seu dia e a sua noite.</p>
           <a class="btn" href="#colecoes" data-tab-link="Masculino">Ver coleções</a>
         </div>
-        <div class="slide-art" data-bottle="13" data-bottle-b="1"></div>
+        <div class="slide-art" data-cut="assets/produtos/sauvage-recorte.webp" data-product="13"></div>
       </article>
-      <article class="slide" data-theme="amber" aria-roledescription="slide" aria-label="2 de 3" aria-hidden="true">
+      <article class="slide has-bg" data-theme="amber" style="--bg:url(../assets/fundos/banho-ambar.webp);--bg-p:url(../assets/fundos/banho-ambar-p.webp)" aria-roledescription="slide" aria-label="2 de 3" aria-hidden="true">
         <div class="slide-copy">
-          <span class="eyebrow">O encanto da perfumaria árabe</span>
-          <h2 class="slide-title">Âmbar, oud<br><em>e baunilha.</em></h2>
-          <p>Fragrâncias intensas, quentes e marcantes, para quem gosta de deixar rastro por onde passa.</p>
-          <a class="btn" href="#colecoes" data-tab-link="Árabe">Ver árabes</a>
+          <span class="eyebrow">Orientais e intensos</span>
+          <h2 class="slide-title">Âmbar, baunilha<br><em>e especiarias.</em></h2>
+          <p>Fragrâncias quentes e marcantes, para quem gosta de deixar rastro por onde passa.</p>
+          <a class="btn" href="#catalogo" data-family-link="Oriental">Ver orientais</a>
         </div>
-        <div class="slide-art" data-bottle="20" data-bottle-b="19"></div>
+        <div class="slide-art slide-art-empty"></div>
       </article>
-      <article class="slide" data-theme="pearl" aria-roledescription="slide" aria-label="3 de 3" aria-hidden="true">
+      <article class="slide has-bg" data-theme="pearl" style="--bg:url(../assets/fundos/agua-violeta.webp);--bg-p:url(../assets/fundos/agua-violeta-p.webp)" aria-roledescription="slide" aria-label="3 de 3" aria-hidden="true">
         <div class="slide-copy">
           <span class="eyebrow">Um jeito leve de escolher</span>
           <h2 class="slide-title">Qual maré<br><em>é a sua?</em></h2>
           <p>Arraste, veja o frasco mudar de cor e descubra a família de perfumes que combina com você.</p>
           <a class="btn" href="#mare">Descobrir minha maré</a>
         </div>
-        <div class="slide-art" data-bottle="14" data-bottle-b="28"></div>
+        <div class="slide-art" data-cut="assets/produtos/linterdit-recorte.webp" data-product="47"></div>
       </article>
     </div>
     <div class="hero-controls">
@@ -114,29 +114,25 @@
     </header>
     <div class="family-grid">
       <a class="family reveal" href="#catalogo" data-family-link="Fresco" style="--d:0s">
-        <span class="family-arch fam-fresco" aria-hidden="true">
-          <svg viewBox="0 0 200 260"><g class="spin-slow"><circle cx="100" cy="150" r="56" class="f-fill-a"/><circle cx="100" cy="150" r="46" class="f-fill-b"/><g class="f-line"><path d="M100 104v92M54 150h92M67 117l66 66M133 117l-66 66"/></g></g><circle cx="152" cy="74" r="22" class="f-fill-c"/><path class="f-leaf" d="M40 80c18-26 46-28 58-20-10 20-36 32-58 20Z"/></svg>
+        <span class="family-arch has-img fam-fresco" aria-hidden="true"><img src="assets/fundos/limao-descascado-p.webp" alt="" loading="lazy" decoding="async" style="object-position:62% 50%">
         </span>
         <span class="family-name">Frescos</span>
         <span class="family-notes">Cítricos, marinhos e verdes</span>
       </a>
       <a class="family reveal" href="#catalogo" data-family-link="Floral" style="--d:.08s">
-        <span class="family-arch fam-floral" aria-hidden="true">
-          <svg viewBox="0 0 200 260"><g class="sway"><g transform="translate(100 140)"><ellipse rx="22" ry="44" class="f-fill-a" transform="rotate(0) translate(0 -38)"/><ellipse rx="22" ry="44" class="f-fill-a" transform="rotate(72) translate(0 -38)"/><ellipse rx="22" ry="44" class="f-fill-a" transform="rotate(144) translate(0 -38)"/><ellipse rx="22" ry="44" class="f-fill-a" transform="rotate(216) translate(0 -38)"/><ellipse rx="22" ry="44" class="f-fill-a" transform="rotate(288) translate(0 -38)"/><circle r="16" class="f-fill-c"/></g></g><path class="f-leaf" d="M40 228c20-30 44-34 60-26-12 22-40 34-60 26Z"/></svg>
+        <span class="family-arch has-img fam-floral" aria-hidden="true"><img src="assets/fundos/flor-copo-de-leite-p.webp" alt="" loading="lazy" decoding="async" style="object-position:70% 40%">
         </span>
         <span class="family-name">Florais</span>
         <span class="family-notes">Rosa, jasmim e flor de laranjeira</span>
       </a>
       <a class="family reveal" href="#catalogo" data-family-link="Amadeirado" style="--d:.16s">
-        <span class="family-arch fam-madeira" aria-hidden="true">
-          <svg viewBox="0 0 200 260"><g class="f-line breathe"><circle cx="100" cy="150" r="70"/><circle cx="104" cy="148" r="54"/><circle cx="98" cy="152" r="38"/><circle cx="102" cy="149" r="22"/><circle cx="100" cy="150" r="8"/></g><path class="f-leaf" d="M140 66c16-22 38-22 46-14-10 16-30 24-46 14Z"/></svg>
+        <span class="family-arch has-img fam-madeira" aria-hidden="true"><img src="assets/fundos/marmore-arco-p.webp" alt="" loading="lazy" decoding="async" style="object-position:82% 60%">
         </span>
         <span class="family-name">Amadeirados</span>
         <span class="family-notes">Cedro, sândalo e vetiver</span>
       </a>
       <a class="family reveal" href="#catalogo" data-family-link="Oriental" style="--d:.24s">
-        <span class="family-arch fam-oriental" aria-hidden="true">
-          <svg viewBox="0 0 200 260"><g class="spin-slow"><path class="f-fill-a" d="M100 82l13 40 42 0-34 25 13 40-34-25-34 25 13-40-34-25 42 0Z" transform="translate(0 20)"/></g><circle cx="58" cy="210" r="14" class="f-fill-c"/><circle cx="148" cy="214" r="9" class="f-fill-c"/><path class="f-line" d="M40 70q30-20 60 0t60 0"/></svg>
+        <span class="family-arch has-img fam-oriental" aria-hidden="true"><img src="assets/fundos/ambar-p.webp" alt="" loading="lazy" decoding="async" style="object-position:80% 50%">
         </span>
         <span class="family-name">Orientais</span>
         <span class="family-notes">Âmbar, baunilha e especiarias</span>
@@ -169,7 +165,7 @@
   </section>
 
   <!-- Momento interativo -->
-  <section class="tide" id="mare" aria-labelledby="tide-title">
+  <section class="tide has-bg" id="mare" aria-labelledby="tide-title" style="--bg:url(../assets/fundos/plano-japa.webp);--bg-p:url(../assets/fundos/plano-japa-p.webp)">
     <div class="tide-bg" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="tide-copy reveal">
       <span class="eyebrow">Um gesto, uma maré</span>
@@ -298,7 +294,7 @@
   <!-- Nossa história -->
   <section class="story" aria-labelledby="story-title">
     <div class="story-art reveal" aria-hidden="true">
-      <div class="story-arch"><div class="story-bottle" data-bottle="27"></div></div>
+      <div class="story-arch has-bg" style="--bg:url(../assets/fundos/pano-rosado.webp);--bg-p:url(../assets/fundos/pano-rosado-p.webp)"><img class="story-cut" src="assets/produtos/invictus-recorte.webp" alt="" loading="lazy" decoding="async"></div>
       <svg class="story-ring" viewBox="0 0 200 200"><defs><path id="ring" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1-160 0"/></defs><text><textPath href="#ring">PERFUME É MEMÓRIA QUE A GENTE VESTE ✦ PERFUME É MEMÓRIA QUE A GENTE VESTE ✦</textPath></text></svg>
     </div>
     <div class="story-copy reveal">
@@ -312,7 +308,7 @@
 
   <!-- Chamada final -->
   <section class="final" aria-labelledby="final-title">
-    <div class="final-inner reveal">
+    <div class="final-inner reveal has-bg" style="--bg:url(../assets/fundos/praia-quente.webp);--bg-p:url(../assets/fundos/praia-quente-p.webp)">
       <span class="eyebrow">Ficou em dúvida?</span>
       <h2 id="final-title">Guarde seus favoritos<br><em>e escolha com calma.</em></h2>
       <p>Toque no coração dos perfumes que chamaram sua atenção. Sua seleção fica guardada aqui enquanto você navega.</p>
