@@ -882,3 +882,110 @@ dialog .icon-btn:hover { background: var(--pearl); }
 .product-media .photo.zoom, .top-media .photo.zoom { transform: scale(1.45); }
 .product:hover .product-media .photo.zoom { transform: scale(1.45); }
 .chip, .fav { z-index: 2; }
+
+/* ==========================================================================
+   Edição 8: leitura confortável no celular
+   - Títulos e textos sem quebras forçadas (o <br> some em telas pequenas).
+   - Cards de produto na horizontal no celular: foto maior e todos os detalhes.
+   - Seções em painéis arredondados, com mais respiro.
+   ========================================================================== */
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+.btn { white-space: nowrap; }
+.meta { font-size: 12px; color: var(--muted); letter-spacing: .04em; margin-top: 6px; }
+.top-notes { font-size: 13px; color: #a39e95; margin: -4px 0 12px; line-height: 1.5; }
+
+@media (max-width: 1000px) {
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 760px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  h1 br, h2 br { display: none; }
+  .announce-extra { display: none; }
+  .announce p { letter-spacing: .12em; }
+
+  /* Seções com mais respiro e títulos que cabem em menos linhas */
+  .section { padding: 76px 20px; }
+  .section-head { margin-bottom: 38px; }
+  .section-head h2 { font-size: clamp(32px, 9vw, 40px); }
+  .section-head p { font-size: 16px; line-height: 1.65; }
+  .eyebrow { letter-spacing: .2em; }
+  .hero-ed { padding: 28px 16px 56px; }
+  .hero-ed h1 { font-size: clamp(38px, 11vw, 48px); }
+  .ed-lead { font-size: 16px; }
+  .ed-panel { padding: 30px 24px; border-radius: 22px; }
+  .ed-frame { width: min(300px, 78vw); }
+
+  /* Painéis arredondados para as seções escuras e com foto */
+  .top5, .story.editorial, .final.editorial { margin: 14px 10px; border-radius: 22px; overflow: hidden; isolation: isolate; }
+  .story.editorial, .final.editorial { padding: 56px 14px; }
+  .tide { margin: 14px 10px; border-radius: 22px; }
+  .tide.editorial-light { padding: 40px 14px; }
+  .tide.editorial-light .tide-copy, .story-copy { padding: 30px 22px; }
+  .final .final-inner { padding: 40px 22px; }
+  .collections { background: var(--pearl); margin: 14px 10px; border-radius: 22px; padding: 64px 12px 56px; }
+  .collections .tabs { background: var(--cream); }
+
+  /* Card de produto na horizontal: foto à esquerda, detalhes à direita */
+  .product-grid { grid-template-columns: 1fr; gap: 14px; }
+  .product-grid .product { display: grid; grid-template-columns: 42% 1fr; align-items: stretch; }
+  .product-grid .product-media { margin: 10px 0 10px 10px; width: calc(100% - 10px); min-width: 0; aspect-ratio: 3 / 4; height: auto; align-self: start; }
+  .product-grid .product > * { min-width: 0; }
+  .product-grid .product-info { padding: 16px 16px 16px 16px; }
+  .product-grid .chip { display: none; }
+  .product-grid .product-foot { text-align: left; }
+  .product-grid .fav { right: 8px; top: 8px; width: 36px; height: 36px; }
+  .product h3 { font-size: 20px; line-height: 1.2; }
+  .notes { font-size: 14px; line-height: 1.55; font-weight: 400; flex: 0 0 auto; }
+  .product-grid .product-foot { margin-top: auto; padding-top: 12px; gap: 10px; }
+  .product-grid .product-info .meta { margin-bottom: 12px; }
+  .price { font-size: 13px; }
+  .mini-btn { padding: 11px 14px; font-size: 11px; }
+
+  /* Trilho "mais amados": cards maiores, um por vez com a ponta do próximo */
+  .rail { grid-auto-columns: 82%; gap: 14px; padding-inline: 2px; }
+  .rail .product-info { padding: 18px 18px 20px; }
+  .rail .product-foot { flex-direction: row; justify-content: space-between; text-align: left; }
+
+  /* Top 5 em lista: número, foto e detalhes lado a lado */
+  .top5 { padding: 64px 12px; }
+  .top-grid { grid-template-columns: 1fr; gap: 12px; }
+  .top-card, .top-card:last-child { width: auto; grid-column: auto; display: grid; grid-template-columns: 34px 96px 1fr; grid-template-rows: auto auto auto 1fr; column-gap: 14px; align-items: start; text-align: left; padding: 16px; }
+  .top-num { position: static; grid-row: 1 / -1; font-size: 28px; line-height: 1; padding-top: 4px; }
+  .top-media, .top-media.has-photo { grid-row: 1 / -1; grid-column: 2; width: 96px; margin: 0; border-radius: 12px; overflow: hidden; }
+  .top-card .brand, .top-card h3, .top-card .top-notes, .top-card .link-btn { grid-column: 3; justify-self: start; }
+  .top-card h3 { font-size: 20px; margin: 4px 0 6px; }
+  .top-notes { margin: 0 0 12px; font-size: 14px; }
+
+  /* Faixa de cuidado em quadros 2 x 2 */
+  .care { grid-template-columns: 1fr 1fr; gap: 10px; margin: 40px 10px 0; padding: 0; border: 0; }
+  .care-item, .care-item:last-child { border: 0; padding: 22px 12px; border-radius: 18px; background: var(--pearl); align-content: start; }
+  .care-item b { font-size: 11px; letter-spacing: .12em; }
+  .care-item span { font-size: 13px; line-height: 1.5; }
+
+  /* Guia */
+  .py-buttons { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .py-buttons button { width: 100%; }
+  .py-text { text-align: left; }
+  .concentrations { border-radius: 18px; }
+
+  /* Botões que não quebram em duas linhas */
+  .story-copy .btn, .final .btn, .tide-result .btn, .center .btn { width: 100%; justify-content: center; padding-inline: 20px; letter-spacing: .14em; }
+
+  .footer { margin-top: 14px; border-radius: 22px 22px 0 0; padding: 56px 24px 30px; }
+}
+@media (max-width: 360px) {
+  .product-grid .product { grid-template-columns: 38% 1fr; }
+  .top-card, .top-card:last-child { grid-template-columns: 26px 78px 1fr; }
+  .top-media, .top-media.has-photo { width: 78px; }
+}
+@media (max-width: 400px) {
+  .header { padding-inline: 10px; gap: 6px; }
+  .header-actions { gap: 0; }
+  .logo-mark { display: none; }
+  .logo-name { font-size: 18px; }
+}

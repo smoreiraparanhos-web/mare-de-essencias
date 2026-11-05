@@ -77,3 +77,13 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Com foto: Paradoxe, Homem Sagaz, Attar Al Wesal (Al Wataniah), Hawas for Him, Mercedes-Benz Select, Montblanc Individuel, Montblanc Starwalker, Nautica Voyage, Stella Dustin Homme Sport. Fotos de Phantom, Sauvage, Scandal, Sì e The Blend trocadas pelas versões originais.
 - Fotos quadradas aproximadas para o frasco ficar em destaque; fotos largas mostradas inteiras.
 - Arquivos enviados na raiz convertidos para `assets/produtos/` e retirados da raiz.
+
+## Edição 8: celular confortável e segurança
+- Celular: títulos sem quebras forçadas, textos maiores e mais legíveis.
+- Cards de produto na horizontal no celular (foto à esquerda, marca, nome, notas, família e coleção à direita); tablets com 2 ou 3 colunas.
+- Top 5 em lista com foto e notas; trilho dos mais amados com cards maiores.
+- Seções em painéis arredondados (Top 5, Maré, Coleções, História, Chamada final, rodapé) e faixa de cuidado em quadros 2 x 2.
+- Cards mostram também família e coleção.
+- Corrigido estouro lateral do cabeçalho em celulares de 360px.
+- Segurança: política de conteúdo (CSP) no `index.html`, cabeçalhos em `_headers` e guia em `docs/SEGURANCA.md`.
+

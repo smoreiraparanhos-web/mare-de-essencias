@@ -10,6 +10,8 @@ Rode um servidor local na pasta do projeto (`npx http-server`) e abra o endereç
 - `css/loja.css`: identidade visual (grafite, dourado e areia; fontes; formas) e layout. O bloco "Tema sóbrio" no fim do arquivo concentra as cores escuras.
 - `js/loja.js`: lista de produtos, carrossel, coleções, catálogo, busca, seletor de maré, pirâmide olfativa e seleção.
 - `docs/BRIEFING.md`: dados da marca e operação comercial.
+- `docs/SEGURANCA.md`: o que protege o site e checklist de segurança.
+- `_headers`: cabeçalhos de segurança para Netlify e Cloudflare Pages.
 - `CLAUDE.md`: instruções para evolução com Claude Code.
 
 ## Imagens
@@ -23,4 +25,4 @@ Em `js/loja.js`, adicione o arquivo ao objeto `fotos` (id do produto, nome do ar
 Confirmar fornecedores e autorização de revenda, estoque e preços; obter fotos com direito de uso; integrar uma plataforma de e-commerce confiável com checkout, frete, pagamentos, pedidos e políticas de privacidade e devolução; validar obrigações fiscais e legais. Não coletar cartão diretamente neste frontend.
 
 ## Atualizar o site sem visual quebrado
-Ao mudar `css/loja.css` ou `js/loja.js`, aumente o número `?v=` nos links do `index.html` (ex.: `?v=12`). Isso obriga o navegador a baixar o arquivo novo em vez de usar uma cópia antiga guardada.
+Ao mudar `css/loja.css` ou `js/loja.js`, aumente o número `?v=` nos links do `index.html` (ex.: `?v=13`). Isso obriga o navegador a baixar o arquivo novo em vez de usar uma cópia antiga guardada.

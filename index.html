@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#121418">
 <meta name="description" content="Maré de Essências: perfumaria com curadoria de masculinos, femininos, unissex, árabes e nicho. Encontre a fragrância que combina com você.">
 <title>Maré de Essências · Perfumaria</title>
@@ -10,13 +12,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
-<link rel="stylesheet" href="css/loja.css?v=11">
-<script src="js/loja.js?v=11" defer></script>
+<link rel="stylesheet" href="css/loja.css?v=12">
+<script src="js/loja.js?v=12" defer></script>
 </head>
 <body>
 <a class="skip" href="#principal">Ir ao conteúdo</a>
 
-<div class="announce"><p>Masculinos, femininos e unissex · Importados e nacionais · Atendimento personalizado</p></div>
+<div class="announce"><p>Masculinos, femininos e unissex<span class="announce-extra"> · Importados e nacionais · Atendimento personalizado</span></p></div>
 
 <header class="header" id="topo">
   <button class="icon-btn menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
@@ -55,7 +57,7 @@
     <div class="ed-inner">
       <div class="ed-panel">
         <span class="eyebrow">Perfumaria Maré de Essências</span>
-        <h1 id="hero-title">Fragrâncias que<br><em>marcam presença.</em></h1>
+        <h1 id="hero-title">Fragrâncias que <br><em>marcam presença.</em></h1>
         <p class="ed-lead">Os perfumes mais desejados do mundo e grandes criações nacionais, escolhidos um a um para você encontrar a sua assinatura.</p>
         <div class="ed-actions">
           <a class="btn btn-gold" href="#colecoes" data-tab-link="Masculino">Ver perfumes</a>
@@ -150,7 +152,7 @@
     <div class="tide-bg" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="tide-copy reveal">
       <span class="eyebrow">Um gesto, uma maré</span>
-      <h2 id="tide-title">Qual maré<br><em>combina com você?</em></h2>
+      <h2 id="tide-title">Qual maré <br><em>combina com você?</em></h2>
       <p class="tide-intro">Arraste a maré e veja o frasco mudar de cor. Cada nível é uma família de perfumes.</p>
       <div class="tide-control">
         <label for="tide-range">Do mais leve ao mais intenso</label>
@@ -293,7 +295,7 @@
     <div class="ed-bg" aria-hidden="true" style="--bg:url(../assets/fundos/praia-quente.webp)"></div><div class="ed-shade shade-final" aria-hidden="true"></div>
     <div class="final-inner ed-panel reveal">
       <span class="eyebrow">Ficou em dúvida?</span>
-      <h2 id="final-title">Guarde seus favoritos<br><em>e escolha com calma.</em></h2>
+      <h2 id="final-title">Guarde seus favoritos <br><em>e escolha com calma.</em></h2>
       <p>Toque no coração dos perfumes que chamaram sua atenção. Eles ficam reunidos na sua seleção enquanto você navega.</p>
       <button class="btn btn-light" id="final-bag">Ver minha seleção</button>
     </div>

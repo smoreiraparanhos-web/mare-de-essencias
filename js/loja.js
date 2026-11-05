@@ -190,6 +190,7 @@
         <span class="brand">${p.marca}</span>
         <h3>${p.nome}</h3>
         <p class="notes">${p.notas}</p>
+        <p class="meta">${p.familia} · ${p.cat}</p>
         <div class="product-foot">
           <span class="price">Preço sob consulta</span>
           <button class="mini-btn" data-fav="${p.id}" aria-pressed="${on}">${on ? 'Na seleção ✓' : 'Quero este'}</button>
@@ -241,6 +242,7 @@
       <div class="top-media${mediaStyle(p)}">${media(p)}</div>
       <span class="brand">${p.marca}</span>
       <h3>${p.nome}</h3>
+      <p class="top-notes">${p.notas}</p>
       <button class="link-btn" data-fav="${p.id}" aria-pressed="${selected.has(p.id)}" aria-label="Guardar ${p.nome} na seleção">${heart} Guardar</button>
     </li>`;
   }).join('');
