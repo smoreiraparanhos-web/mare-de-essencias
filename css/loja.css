@@ -882,3 +882,160 @@ dialog .icon-btn:hover { background: var(--pearl); }
 .product-media .photo.zoom, .top-media .photo.zoom { transform: scale(1.45); }
 .product:hover .product-media .photo.zoom { transform: scale(1.45); }
 .chip, .fav { z-index: 2; }
+
+/* ================================================================
+   Edição 11: loja com WhatsApp, página do perfume, catálogo com filtros
+   e temas por coleção (masculino quente, feminino rosé, teen vibrante).
+   ================================================================ */
+:root {
+  --acc: var(--gold); --acc-soft: var(--gold-soft); --acc-deep: #8a6a34;
+  --surface: var(--cream); --surface-2: var(--pearl);
+  --band: radial-gradient(110% 140% at 88% 10%, rgba(201, 162, 107, .32), transparent 55%), linear-gradient(135deg, #0f1013 0%, #1c1f24 60%, #2a2722 100%);
+  --wa: #1e7c4f; --wa-hover: #16653f;
+}
+.tema-masculino {
+  --acc: #b8733a; --acc-soft: #e6b98a; --acc-deep: #8a4f22;
+  --surface: #f4ede3; --surface-2: #ebdfcf;
+  --band: radial-gradient(110% 150% at 85% 15%, rgba(214, 128, 52, .5), transparent 55%), linear-gradient(135deg, #120d0a 0%, #2a1a10 55%, #4d2c15 100%);
+}
+.tema-feminino {
+  --acc: #c07a85; --acc-soft: #f0c9cc; --acc-deep: #9b4f5c;
+  --surface: #faf2f0; --surface-2: #f3e3e0;
+  --band: radial-gradient(110% 150% at 85% 15%, rgba(240, 175, 182, .55), transparent 55%), linear-gradient(135deg, #2a191e 0%, #5b3441 55%, #95606b 100%);
+}
+.tema-teen {
+  --acc: #7b5cff; --acc-soft: #c4b6ff; --acc-deep: #5a3fd6;
+  --surface: #f6f4ff; --surface-2: #ebe7ff;
+  --band: radial-gradient(80% 120% at 92% 8%, rgba(56, 198, 180, .6), transparent 55%), radial-gradient(70% 110% at 5% 100%, rgba(255, 128, 168, .45), transparent 55%), linear-gradient(135deg, #1d1546 0%, #4730c4 100%);
+}
+.tema-arabe {
+  --acc: #c48a2c; --acc-soft: #ecc983; --acc-deep: #8a5f18;
+  --surface: #f6efe3; --surface-2: #ede1cb;
+  --band: radial-gradient(110% 150% at 85% 15%, rgba(214, 160, 60, .45), transparent 55%), linear-gradient(135deg, #100c08 0%, #2b1d0f 55%, #4a3214 100%);
+}
+
+/* Elementos que seguem o tema */
+[class*="tema-"] .eyebrow { color: var(--acc-deep); }
+[class*="tema-"] h1 em, [class*="tema-"] h2 em { color: var(--acc); }
+[class*="tema-"] .product .brand { color: var(--acc-deep); }
+.product .fav[aria-pressed="true"] svg { fill: var(--acc); stroke: var(--acc); }
+.tema-feminino .product { border-radius: 22px; }
+.tema-feminino .product-media { border-radius: 16px; }
+.tema-feminino h1 em, .tema-feminino h2 em { font-weight: 400; }
+.tema-teen .product { border-radius: 22px; box-shadow: 0 10px 30px -20px rgba(91, 63, 214, .5); }
+.tema-teen .chip { background: var(--acc); color: #fff; }
+.tema-teen h1 em, .tema-teen h2 em { font-family: var(--body); font-style: normal; font-weight: 500; letter-spacing: -.01em; background: linear-gradient(90deg, #8f73ff, #38c6b4); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tema-masculino .product { box-shadow: 0 10px 30px -22px rgba(77, 44, 21, .55); }
+
+/* Coleções da home mudam de clima com a aba */
+.collections { background: var(--surface-2); transition: background .5s var(--ease); }
+.collections .tabs button[aria-selected="true"] { background: var(--ink); color: #fff; }
+.collections.tema-masculino .tabs button[aria-selected="true"], .collections.tema-feminino .tabs button[aria-selected="true"],
+.collections.tema-teen .tabs button[aria-selected="true"], .collections.tema-arabe .tabs button[aria-selected="true"] { background: var(--acc-deep); }
+
+/* Cartão de produto: foto e nome levam à ficha; botão consulta no WhatsApp */
+.media-link { position: absolute; inset: 0; display: grid; place-items: center; }
+.product h3 a { color: inherit; }
+.product h3 a:hover { text-decoration: underline; text-decoration-color: var(--acc); text-underline-offset: 4px; }
+.product h3 a:focus-visible { outline-offset: 2px; }
+.wa-ico { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; }
+.wa-ico .wa-phone { fill: currentColor; stroke: none; }
+.mini-btn.wa-btn { display: inline-flex; align-items: center; gap: 7px; text-decoration: none; }
+.product .mini-btn.wa-btn:hover { background: var(--wa); border-color: var(--wa); color: #fff; }
+
+/* Botões de WhatsApp */
+.btn-wa { background: var(--wa); color: #fff; }
+.btn-wa:hover { background: var(--wa-hover); color: #fff; }
+.btn-wa::after { display: none; }
+.btn-wa .wa-ico { width: 20px; height: 20px; }
+.btn-block { width: 100%; justify-content: center; }
+
+/* Cabeçalho: link ativo e WhatsApp */
+.nav a[aria-current] { color: var(--gold-soft); }
+.nav a[aria-current]::after { left: 0; right: 0; }
+.head-wa svg { stroke-width: 1.5; }
+
+/* Botão flutuante do WhatsApp */
+.wa-float {
+  position: fixed; right: 18px; bottom: 18px; z-index: 40; display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 18px 8px 8px; border-radius: 99px; background: var(--night); color: #f1ece2; font-size: 13px; letter-spacing: .04em;
+  box-shadow: 0 16px 34px -14px rgba(0, 0, 0, .55); border: 1px solid rgba(220, 195, 148, .3); transition: transform .3s var(--ease);
+}
+.wa-float:hover { transform: translateY(-3px); }
+.wa-float svg { width: 40px; height: 40px; padding: 8px; border-radius: 50%; background: var(--wa); fill: none; stroke: #fff; stroke-width: 1.6; }
+.wa-float .wa-phone { fill: #fff; stroke: none; }
+
+/* Rodapé */
+.footer-place { font-size: 13px; }
+.footer-wa { display: inline-flex; align-items: center; gap: 8px; color: #f1ece2; font-weight: 400; }
+.footer-wa svg { width: 18px; height: 18px; fill: none; stroke: var(--gold-soft); stroke-width: 1.6; }
+
+/* Miniaturas (seleção, busca, sugestões da maré) */
+.sel-thumb { position: relative; flex: none; width: 46px; height: 58px; border-radius: 8px; overflow: hidden; display: grid; place-items: center; background: radial-gradient(circle at 50% 40%, #fff, var(--tint, #eee) 75%); }
+.sel-thumb.has-photo { background: var(--photo-bg); }
+.sel-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.sel-thumb img.fit { object-fit: contain; }
+.sel-thumb .bottle-svg { width: 70%; }
+.selected-item { display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; padding: 8px 14px 8px 8px; }
+.selected-item a:hover b { text-decoration: underline; }
+#send-selection { margin-bottom: 12px; }
+#send-selection[hidden] { display: none; }
+.quick-item { color: inherit; }
+.quick-all { display: block; padding: 12px 14px; font-size: 13px; letter-spacing: .04em; color: var(--acc-deep); }
+.quick-all:hover { text-decoration: underline; }
+.pick { padding: 6px 16px 6px 6px; }
+.pick .sel-thumb { width: 34px; height: 42px; border-radius: 8px; }
+
+/* Molduras clicáveis */
+.frame-link { display: block; color: inherit; }
+.final-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+
+/* Compre por coleção */
+.shop-cols { background: var(--cream); padding-bottom: clamp(40px, 5vw, 70px); }
+.col-tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; max-width: 1320px; margin: 0 auto; }
+.col-tile {
+  position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; min-height: 340px;
+  padding: 20px 18px 18px; border-radius: 18px; overflow: hidden; background: var(--band); color: #f6f1e8;
+  box-shadow: 0 18px 40px -26px rgba(18, 20, 24, .7); transition: transform .4s var(--ease), box-shadow .4s;
+}
+.col-tile:hover { transform: translateY(-4px); box-shadow: 0 26px 50px -26px rgba(18, 20, 24, .8); }
+.col-copy { display: grid; gap: 6px; }
+.col-kicker { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--acc-soft); }
+.col-name { font: 400 26px/1.05 var(--display); }
+.tema-feminino .col-name { font-style: italic; }
+.tema-teen .col-name { font: 500 26px/1.05 var(--body); letter-spacing: -.01em; }
+.col-desc { font-size: 13px; line-height: 1.45; color: rgba(246, 241, 232, .78); }
+.col-art { position: relative; align-self: center; width: 78%; aspect-ratio: 4 / 5; border-radius: 12px; overflow: hidden; display: grid; place-items: center; background: radial-gradient(circle at 50% 40%, #fff, var(--tint, #eee) 75%); box-shadow: 0 16px 30px -16px rgba(0, 0, 0, .6); }
+.col-art.has-photo { background: var(--photo-bg); }
+.col-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.col-art img.fit { object-fit: contain; }
+.col-art .bottle-svg { width: 62%; }
+.col-art-teen { background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .25); box-shadow: none; }
+.col-art-teen i { position: absolute; border-radius: 50%; }
+.col-art-teen i:nth-child(1) { width: 46%; aspect-ratio: 1; left: 12%; top: 16%; background: #ff8fb1; }
+.col-art-teen i:nth-child(2) { width: 38%; aspect-ratio: 1; right: 10%; top: 38%; background: #38c6b4; }
+.col-art-teen i:nth-child(3) { width: 28%; aspect-ratio: 1; left: 28%; bottom: 10%; background: #ffd166; }
+
+/* Coleção vazia (ex.: Teen) */
+.empty-col { grid-column: 1 / -1; max-width: 640px; margin: 0 auto; text-align: center; padding: 50px 30px; border-radius: 22px; background: #fff; box-shadow: 0 18px 40px -30px rgba(18, 20, 24, .5); }
+.empty-col h3 { font: 400 30px/1.15 var(--display); margin: 12px 0 10px; }
+.tema-teen .empty-col h3 { font-family: var(--body); font-weight: 500; }
+.empty-col p { color: var(--muted); margin-bottom: 24px; }
+
+@media (max-width: 1100px) {
+  .col-tiles { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .col-tiles { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .col-tile { min-height: 290px; padding: 16px 14px 14px; }
+  .col-name { font-size: 22px; }
+  .col-desc { font-size: 12px; }
+  .wa-float { padding: 6px; right: 14px; bottom: 14px; }
+  .wa-float span { display: none; }
+  .head-wa { display: none; }
+}
+.nav a:not([aria-current]):not(:hover)::after { opacity: 0; }
+.loved { padding-top: clamp(40px, 5vw, 70px); }
+@media (max-width: 640px) {
+  .announce .ann-extra { display: none; }
+}

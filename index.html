@@ -4,44 +4,55 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#121418">
-<meta name="description" content="Maré de Essências: perfumaria com curadoria de masculinos, femininos, unissex, árabes e nicho. Encontre a fragrância que combina com você.">
-<title>Maré de Essências · Perfumaria</title>
+<meta name="description" content="Perfumaria online com curadoria de perfumes masculinos, femininos, unissex, árabes e nicho. Atendimento pelo WhatsApp, de Eldorado do Sul (RS).">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Maré de Essências">
+<meta property="og:title" content="Maré de Essências · Perfumaria online em Eldorado do Sul (RS)">
+<meta property="og:description" content="Perfumaria online com curadoria de perfumes masculinos, femininos, unissex, árabes e nicho. Atendimento pelo WhatsApp, de Eldorado do Sul (RS).">
+<meta property="og:locale" content="pt_BR">
+<title>Maré de Essências · Perfumaria online em Eldorado do Sul (RS)</title>
+<link rel="icon" href="assets/icone.svg" type="image/svg+xml">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap">
-<link rel="stylesheet" href="css/loja.css?v=11">
-<script src="js/loja.js?v=11" defer></script>
+<link rel="stylesheet" href="css/loja.css?v=14">
+<script src="js/produtos.js?v=14" defer></script>
+<script src="js/base.js?v=14" defer></script>
+<script src="js/loja.js?v=14" defer></script>
 </head>
 <body>
 <a class="skip" href="#principal">Ir ao conteúdo</a>
 
-<div class="announce"><p>Masculinos, femininos e unissex · Importados e nacionais · Atendimento personalizado</p></div>
+<div class="announce"><p>Loja online em Eldorado do Sul (RS) <span aria-hidden="true">·</span> Atendimento pelo WhatsApp<span class="ann-extra"> <span aria-hidden="true">·</span> Masculinos, femininos, unissex, árabes e nicho</span></p></div>
 
 <header class="header" id="topo">
   <button class="icon-btn menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
   </button>
-  <a href="#topo" class="logo" aria-label="Maré de Essências, início">
+  <a href="index.html" class="logo" aria-label="Maré de Essências, página inicial">
     <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 25c5-6 9-6 14 0s9 6 14 0"/><path d="M6 31c5-6 9-6 14 0s9 6 14 0" opacity=".5"/><circle cx="20" cy="12" r="4.5"/></svg>
     <span class="logo-text"><span class="logo-name">Maré <i>de</i> Essências</span><span class="logo-sub">PERFUMARIA</span></span>
   </a>
   <nav class="nav" id="nav" aria-label="Principal">
-    <a href="#colecoes" data-tab-link="Masculino">Masculinos</a>
-    <a href="#colecoes" data-tab-link="Feminino">Femininos</a>
-    <a href="#colecoes" data-tab-link="Unissex">Unissex</a>
-    <a href="#colecoes" data-tab-link="Árabe">Árabes</a>
-    <a href="#colecoes" data-tab-link="Nicho">Nicho</a>
-    <a href="#mare">Sua maré</a>
-    <a href="#guia">Como escolher</a>
+    <a href="catalogo.html?cat=Masculino" data-nav="Masculino">Masculinos</a>
+    <a href="catalogo.html?cat=Feminino" data-nav="Feminino">Femininos</a>
+    <a href="catalogo.html?cat=Unissex" data-nav="Unissex">Unissex</a>
+    <a href="catalogo.html?cat=Árabe" data-nav="Árabe">Árabes</a>
+    <a href="catalogo.html?cat=Nicho" data-nav="Nicho">Nicho</a>
+    <a href="catalogo.html?cat=Teen" data-nav="Teen">Teen</a>
+    <a href="catalogo.html" data-nav="todos">Todos</a>
   </nav>
   <div class="header-actions">
     <button class="icon-btn" id="open-search" aria-label="Buscar perfumes">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
     </button>
-    <button class="icon-btn bag" id="bag" aria-label="Minha seleção, 0 perfumes">
+    <a class="icon-btn head-wa" data-wa href="https://wa.me/5551996263127" aria-label="Falar no WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.7 8.7 0 0 0-7.5 13.1L3.3 20.8l4.6-1.2A8.7 8.7 0 1 0 12 3.2Z"/></svg>
+    </a>
+    <button class="icon-btn bag" id="bag" data-open-selection aria-label="Minha seleção, 0 perfumes">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>
-      <span class="bag-count" id="count">0</span>
+      <span class="bag-count">0</span>
     </button>
   </div>
 </header>
@@ -58,13 +69,13 @@
         <h1 id="hero-title">Fragrâncias que<br><em>marcam presença.</em></h1>
         <p class="ed-lead">Os perfumes mais desejados do mundo e grandes criações nacionais, escolhidos um a um para você encontrar a sua assinatura.</p>
         <div class="ed-actions">
-          <a class="btn btn-gold" href="#colecoes" data-tab-link="Masculino">Ver perfumes</a>
-          <a class="btn btn-ghost" href="#mare">Descobrir minha maré</a>
+          <a class="btn btn-gold" href="catalogo.html">Ver perfumes</a>
+          <a class="btn btn-ghost" data-wa href="https://wa.me/5551996263127">Pedir uma indicação</a>
         </div>
         <ul class="ed-facts">
-          <li><b>Para todos</b><span>Masculinos, femininos e unissex</span></li>
+          <li><b>Para todos</b><span>Masculinos, femininos, unissex e teen</span></li>
           <li><b>Curadoria</b><span>Importados, árabes e nacionais</span></li>
-          <li><b>Atendimento</b><span>Ajuda para escolher sem pressa</span></li>
+          <li><b>WhatsApp</b><span>Atendimento direto, de Eldorado do Sul (RS)</span></li>
         </ul>
       </div>
       <figure class="ed-frame" data-frame="13" data-eager="1"></figure>
@@ -77,6 +88,16 @@
     <ul class="brands-list"><li>Dior</li><li>Chanel</li><li>Lancôme</li><li>Paco Rabanne</li><li>Carolina Herrera</li><li>Givenchy</li><li>Lattafa</li><li>Natura</li><li>O Boticário</li><li>Eudora</li></ul>
   </div>
 
+  <!-- Compre por coleção -->
+  <section class="section shop-cols" aria-labelledby="cols-title">
+    <header class="section-head reveal">
+      <span class="eyebrow">Compre por coleção</span>
+      <h2 id="cols-title">Um estilo <em>para cada pessoa</em></h2>
+      <p>Masculinos quentes e marcantes, femininos delicados, árabes intensos e uma seleção teen.</p>
+    </header>
+    <div class="col-tiles" id="col-tiles"></div>
+  </section>
+
   <!-- Famílias olfativas -->
   <section class="section families" aria-labelledby="fam-title">
     <header class="section-head reveal">
@@ -85,7 +106,7 @@
       <p>Todo perfume pertence a uma família. Escolha a sua e veja as fragrâncias que combinam com ela.</p>
     </header>
     <div class="fam-cards">
-      <a class="fam-card reveal" href="#catalogo" data-family-link="Fresco" style="--d:0.0s">
+      <a class="fam-card reveal" href="catalogo.html?familia=Fresco" style="--d:0.0s">
         <img src="assets/fundos/limao-descascado.webp" alt="" loading="lazy" decoding="async" style="object-position:60% 50%">
         <span class="fam-card-body">
           <span class="family-name">Frescos</span>
@@ -93,7 +114,7 @@
           <span class="fam-go">Ver frescos →</span>
         </span>
       </a>
-      <a class="fam-card reveal" href="#catalogo" data-family-link="Floral" style="--d:0.06s">
+      <a class="fam-card reveal" href="catalogo.html?familia=Floral" style="--d:0.06s">
         <img src="assets/fundos/flor-copo-de-leite.webp" alt="" loading="lazy" decoding="async" style="object-position:68% 40%">
         <span class="fam-card-body">
           <span class="family-name">Florais</span>
@@ -101,7 +122,7 @@
           <span class="fam-go">Ver florais →</span>
         </span>
       </a>
-      <a class="fam-card reveal" href="#catalogo" data-family-link="Amadeirado" style="--d:0.12s">
+      <a class="fam-card reveal" href="catalogo.html?familia=Amadeirado" style="--d:0.12s">
         <img src="assets/fundos/marmore-arco.webp" alt="" loading="lazy" decoding="async" style="object-position:85% 60%">
         <span class="fam-card-body">
           <span class="family-name">Amadeirados</span>
@@ -109,7 +130,7 @@
           <span class="fam-go">Ver amadeirados →</span>
         </span>
       </a>
-      <a class="fam-card reveal" href="#catalogo" data-family-link="Oriental" style="--d:0.18s">
+      <a class="fam-card reveal" href="catalogo.html?familia=Oriental" style="--d:0.18s">
         <img src="assets/fundos/ambar.webp" alt="" loading="lazy" decoding="async" style="object-position:78% 50%">
         <span class="fam-card-body">
           <span class="family-name">Orientais</span>
@@ -161,7 +182,7 @@
         <div class="tide-name">Jardim</div>
         <p class="tide-text">Jasmim, flor de laranjeira e rosa. Delicadeza que fica por perto.</p>
         <div class="tide-picks" id="tide-picks"></div>
-        <a class="btn" href="#catalogo" id="tide-go" data-family-link="Floral">Ver todos os florais</a>
+        <a class="btn" href="catalogo.html?familia=Floral" id="tide-go">Ver todos os florais</a>
       </div>
     </div>
     <div class="tide-glass" aria-hidden="true">
@@ -187,30 +208,11 @@
       <button role="tab" id="tab-Unissex" aria-selected="false" aria-controls="tab-panel" data-tab="Unissex" tabindex="-1">Unissex</button>
       <button role="tab" id="tab-Árabe" aria-selected="false" aria-controls="tab-panel" data-tab="Árabe" tabindex="-1">Árabes</button>
       <button role="tab" id="tab-Nicho" aria-selected="false" aria-controls="tab-panel" data-tab="Nicho" tabindex="-1">Nicho</button>
+      <button role="tab" id="tab-Teen" aria-selected="false" aria-controls="tab-panel" data-tab="Teen" tabindex="-1">Teen</button>
     </div>
     <div class="product-grid" id="tab-panel" role="tabpanel" aria-labelledby="tab-Masculino"></div>
     <div class="center">
-      <button class="btn btn-outline" id="open-catalog" aria-expanded="false" aria-controls="catalogo">Ver catálogo completo</button>
-    </div>
-  </section>
-
-  <!-- Catálogo completo, escondido até ser pedido -->
-  <section class="catalog" id="catalogo" aria-labelledby="cat-title" hidden>
-    <div class="catalog-inner">
-      <header class="catalog-head">
-        <div>
-          <span class="eyebrow">Catálogo completo</span>
-          <h2 id="cat-title">Todos os <em>perfumes</em></h2>
-        </div>
-        <button class="link-btn" id="close-catalog">Fechar catálogo</button>
-      </header>
-      <div class="toolbar">
-        <label class="field field-search"><span>Buscar</span><input id="search" type="search" placeholder="Nome, marca ou nota..." autocomplete="off"></label>
-        <label class="field"><span>Coleção</span><select id="cat-filter"><option value="">Todas</option><option>Masculino</option><option>Feminino</option><option>Unissex</option><option>Árabe</option><option>Nicho</option></select></label>
-        <label class="field"><span>Família</span><select id="family"><option value="">Todas</option><option>Fresco</option><option>Floral</option><option>Amadeirado</option><option>Oriental</option></select></label>
-      </div>
-      <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
-      <div class="product-grid" id="products"></div>
+      <a class="btn btn-outline" id="open-catalog" href="catalogo.html?cat=Masculino">Ver todos os masculinos</a>
     </div>
   </section>
 
@@ -222,7 +224,7 @@
     </div>
     <div class="care-item reveal" style="--d:.08s">
       <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 12h28a4 4 0 0 1 4 4v14a4 4 0 0 1-4 4H22l-8 7v-7h-4a4 4 0 0 1-4-4V16a4 4 0 0 1 4-4Z"/><path d="M16 22h16M16 27h10"/></svg>
-      <b>Atendimento humano</b><span>Ajuda real para escolher sem pressa</span>
+      <b>Atendimento pelo WhatsApp</b><span>Ajuda real para escolher sem pressa</span>
     </div>
     <div class="care-item reveal" style="--d:.16s">
       <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="18" width="32" height="22" rx="3"/><path d="M6 12h36v6H6zM24 12v28"/><path d="M24 12c-3-6-10-6-10-2s6 2 10 2c4 0 10 2 10-2s-7-4-10 2Z"/></svg>
@@ -276,15 +278,14 @@
   <section class="story editorial" aria-labelledby="story-title">
     <div class="ed-bg" aria-hidden="true" style="--bg:url(../assets/fundos/banho-ambar.webp)"></div><div class="ed-shade shade-story" aria-hidden="true"></div>
     <div class="story-art reveal" aria-hidden="true">
-      <figure class="ed-frame" data-frame="45"></figure>
-      <svg class="story-ring" viewBox="0 0 200 200"><defs><path id="ring" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1-160 0"/></defs><text><textPath href="#ring">PERFUME É MEMÓRIA QUE A GENTE VESTE ✦ PERFUME É MEMÓRIA QUE A GENTE VESTE ✦</textPath></text></svg>
+      <figure class="ed-frame" data-frame="51"></figure>
     </div>
     <div class="story-copy reveal">
       <span class="eyebrow">Nossa história</span>
       <h2 id="story-title">Mais que perfume, <em>um jeito de se sentir.</em></h2>
       <p>A Maré de Essências nasce da paixão por fragrâncias e pela sensação de encontrar aquela que parece feita para você. Como a maré, cada pessoa muda ao longo do dia, e o perfume acompanha.</p>
-      <p>Aqui você encontra clássicos que todo mundo ama, achados árabes e criações de nicho, sempre com atendimento próximo e sem pressa.</p>
-      <a class="btn" href="#mare">Encontrar o meu perfume</a>
+      <p>Somos uma loja online de Eldorado do Sul (RS). Não temos loja física: o atendimento acontece pelo WhatsApp, com calma, para indicar clássicos, achados árabes e criações de nicho.</p>
+      <a class="btn btn-gold" data-wa href="https://wa.me/5551996263127">Conversar no WhatsApp</a>
     </div>
   </section>
 
@@ -293,9 +294,12 @@
     <div class="ed-bg" aria-hidden="true" style="--bg:url(../assets/fundos/praia-quente.webp)"></div><div class="ed-shade shade-final" aria-hidden="true"></div>
     <div class="final-inner ed-panel reveal">
       <span class="eyebrow">Ficou em dúvida?</span>
-      <h2 id="final-title">Guarde seus favoritos<br><em>e escolha com calma.</em></h2>
-      <p>Toque no coração dos perfumes que chamaram sua atenção. Eles ficam reunidos na sua seleção enquanto você navega.</p>
-      <button class="btn btn-light" id="final-bag">Ver minha seleção</button>
+      <h2 id="final-title">Guarde seus favoritos<br><em>e envie pelo WhatsApp.</em></h2>
+      <p>Toque no coração dos perfumes que chamaram sua atenção. Depois é só enviar a lista para receber preço, disponibilidade e indicações.</p>
+      <div class="final-actions">
+        <button class="btn btn-gold" data-open-selection>Ver minha seleção</button>
+        <a class="btn btn-ghost" data-wa href="https://wa.me/5551996263127">Falar no WhatsApp</a>
+      </div>
     </div>
   </section>
 </main>
@@ -305,45 +309,55 @@
     <div class="footer-brand">
       <span class="logo-name">Maré <i>de</i> Essências</span>
       <p>Perfumaria com curadoria de masculinos, femininos, unissex, árabes e nicho.</p>
+      <p class="footer-place">Loja online em Eldorado do Sul (RS). Não temos loja física: todo o atendimento é feito pelo WhatsApp.</p>
     </div>
     <div class="footer-col">
       <h3>Coleções</h3>
-      <a href="#colecoes" data-tab-link="Masculino">Masculinos</a>
-      <a href="#colecoes" data-tab-link="Feminino">Femininos</a>
-      <a href="#colecoes" data-tab-link="Unissex">Unissex</a>
-      <a href="#colecoes" data-tab-link="Árabe">Árabes</a>
-      <a href="#colecoes" data-tab-link="Nicho">Nicho</a>
+      <a href="catalogo.html?cat=Masculino">Masculinos</a>
+      <a href="catalogo.html?cat=Feminino">Femininos</a>
+      <a href="catalogo.html?cat=Unissex">Unissex</a>
+      <a href="catalogo.html?cat=%C3%81rabe">Árabes</a>
+      <a href="catalogo.html?cat=Nicho">Nicho</a>
+      <a href="catalogo.html?cat=Teen">Teen</a>
     </div>
     <div class="footer-col">
       <h3>Descubra</h3>
-      <a href="#mare">Qual maré é você</a>
-      <a href="#guia">Como escolher</a>
-      <a href="#catalogo" id="footer-catalog">Catálogo completo</a>
+      <a href="index.html#mare">Qual maré é você</a>
+      <a href="index.html#guia">Como escolher</a>
+      <a href="catalogo.html">Todos os perfumes</a>
     </div>
     <div class="footer-col">
       <h3>Atendimento</h3>
-      <p>Canais de atendimento e compra em breve.</p>
+      <a class="footer-wa" data-wa href="https://wa.me/5551996263127"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.7 8.7 0 0 0-7.5 13.1L3.3 20.8l4.6-1.2A8.7 8.7 0 1 0 12 3.2Z"/></svg>WhatsApp (51) 99626-3127</a>
+      <p>Eldorado do Sul, Rio Grande do Sul</p>
+      <p>Preço e disponibilidade informados na conversa.</p>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>Site em fase de apresentação: ainda não realizamos vendas, pedidos ou pagamentos. Preços e disponibilidade serão informados no lançamento. As imagens dos frascos são ilustrações. As marcas citadas pertencem aos seus donos.</p>
+    <p>O site não faz pedidos nem pagamentos: preço, disponibilidade e forma de compra são combinados no atendimento pelo WhatsApp. As marcas e os nomes dos perfumes pertencem aos seus donos.</p>
     <a href="#topo">Voltar ao topo ↑</a>
   </div>
 </footer>
 
+<a class="wa-float" data-wa href="https://wa.me/5551996263127" aria-label="Falar com a Maré de Essências no WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2a8.7 8.7 0 0 0-7.5 13.1L3.3 20.8l4.6-1.2A8.7 8.7 0 1 0 12 3.2Z"/><path class="wa-phone" d="M9.1 7.9c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.4.8 1.3 1.8 2.5 2.4.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.6.8c.2.1.4.2.4.4 0 .4-.1 1.1-.6 1.5-.5.5-1.4.8-2.3.6-1.1-.3-2.6-.9-4-2.4-1.3-1.3-2-2.7-2.2-3.6-.2-1 .2-1.8.4-2.1Z"/></svg>
+  <span>Fale com a gente</span>
+</a>
+
 <dialog id="selection" aria-labelledby="sel-title">
   <button class="icon-btn close" id="close" aria-label="Fechar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   <h2 id="sel-title">Minha seleção</h2>
-  <p class="muted">Os perfumes que chamaram sua atenção.</p>
+  <p class="muted">Os perfumes que chamaram sua atenção. Envie a lista para saber preço e disponibilidade.</p>
   <div id="selected"></div>
-  <p class="note">Ainda não fazemos pedidos pelo site. Em breve você poderá enviar esta lista para o nosso atendimento.</p>
+  <a class="btn btn-wa btn-block" id="send-selection" href="https://wa.me/5551996263127" target="_blank" rel="noopener" hidden>Enviar minha seleção pelo WhatsApp</a>
+  <p class="note">A seleção fica guardada só neste navegador.</p>
 </dialog>
 
 <dialog id="search-dialog" class="search-dialog" aria-label="Buscar perfumes">
   <form method="dialog" class="search-form">
     <label class="sr-only" for="quick-search">Buscar perfumes</label>
-    <input id="quick-search" type="search" placeholder="Busque por nome, marca ou nota" autocomplete="off">
-    <button class="icon-btn" aria-label="Fechar busca"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <input id="quick-search" type="search" placeholder="Busque por nome, marca ou nota" autocomplete="off" enterkeyhint="search">
+    <button class="icon-btn" type="button" onclick="this.closest('dialog').close()" aria-label="Fechar busca"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </form>
   <div id="quick-results" class="quick-results"></div>
 </dialog>
