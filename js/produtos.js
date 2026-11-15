@@ -76,7 +76,16 @@
     P(55, 'Individuel', 'Montblanc', 'Masculino', 'Oriental', 'Lavanda · Flor de laranjeira · Chocolate amargo', 'classic', '#b8c4cc', '#8a8d92'),
     P(56, 'Starwalker', 'Montblanc', 'Masculino', 'Fresco', 'Bambu · Tangerina · Sândalo', 'tall', '#eef1f2', '#8a8d92'),
     P(57, 'Voyage', 'Nautica', 'Masculino', 'Fresco', 'Maçã verde · Notas aquáticas · Almíscar', 'round', '#8fc3e6', '#c0c4c9'),
-    P(58, 'Homme Sport', 'Stella Dustin', 'Masculino', 'Fresco', 'Bergamota · Sálvia · Ambroxan', 'tall', '#e8d9a8', '#8a8d92')
+    P(58, 'Homme Sport', 'Stella Dustin', 'Masculino', 'Fresco', 'Bergamota · Sálvia · Ambroxan', 'tall', '#e8d9a8', '#8a8d92'),
+
+    /* Coleção Teen: perfumes jovens e populares, notas conferidas em fichas oficiais ou de lojas. */
+    P(59, 'Thank U, Next', 'Ariana Grande', 'Teen', 'Oriental', 'Pera · Coco · Açúcar de macaron', 'round', '#f6c1d0', '#f3ece6'),
+    P(60, 'Ari', 'Ariana Grande', 'Teen', 'Floral', 'Pera · Lírio-do-vale · Marshmallow', 'drop', '#d9c8f0', '#efe7f7'),
+    P(61, 'Nina', 'Nina Ricci', 'Teen', 'Floral', 'Limão · Maçã · Praliné', 'round', '#d8343f', '#c9a26b'),
+    P(62, 'Be Delicious', 'DKNY', 'Teen', 'Fresco', 'Maçã verde · Pepino · Magnólia', 'round', '#9ccf5a', '#c0c4c9'),
+    P(63, 'Floratta Blue', 'O Boticário', 'Teen', 'Floral', 'Bergamota · Gardênia · Musk', 'classic', '#9fc3e6', '#e9eef2'),
+    P(64, 'Quasar Classic', 'O Boticário', 'Teen', 'Fresco', 'Bergamota · Lavanda · Madeiras', 'tall', '#2f5f9e', '#c0c4c9'),
+    P(65, 'Kaiak', 'Natura', 'Teen', 'Fresco', 'Mandarina · Muguet · Sândalo', 'tall', '#7fc6c9', '#e9eef2')
   ];
 
   /* Fichas: subfamília, concentração, ocasião, notas e descrição. */
@@ -312,7 +321,35 @@
     58: { sub: 'Cítrico aromático', conc: 'Eau de Parfum', ocasiao: 'Dia, esporte e calor',
       piramide: ['Bergamota · Limão-siciliano · Cítricos', 'Notas verdes · Sálvia · Gerânio · Rosa damascena', 'Madeiras · Almíscar · Ambroxan'],
       desc: ['Homme Sport, da Stella Dustin, é um cítrico aromático: bergamota e limão-siciliano abrem fresco, sálvia e gerânio dão o toque aromático e o fundo de madeiras e ambroxan segura a fragrância na pele.',
-        'Leve e esportivo, é ótimo para o dia a dia e os dias quentes.'] }
+        'Leve e esportivo, é ótimo para o dia a dia e os dias quentes.'] },
+    59: { sub: 'Frutado gourmand', conc: 'Eau de Parfum', ocasiao: 'Dia a dia, escola e passeios',
+      piramide: ['Pera branca · Framboesa silvestre', 'Coco · Rosa', 'Almíscar · Açúcar de macaron'],
+      desc: ['Thank U, Next, de Ariana Grande, é doce e divertido: pera e framboesa na abertura, coco cremoso com rosa no coração e um fundo de almíscar com açúcar de macaron.',
+        'Alegre e fácil de gostar, é perfeito para quem está começando a usar perfume e ama fragrâncias adocicadas.'] },
+    60: { sub: 'Floral frutado gourmand', conc: 'Eau de Parfum', ocasiao: 'Dia a dia, escola e festas',
+      piramide: ['Pera · Toranja-rosa · Framboesa', 'Lírio-do-vale · Rosa · Orquídea', 'Marshmallow · Almíscar · Madeiras'],
+      desc: ['Ari, o primeiro perfume de Ariana Grande, mistura frutas suculentas com flores delicadas e um fundo macio de marshmallow.',
+        'Fofo e luminoso, agrada quem gosta de perfumes doces sem exagero.'] },
+    61: { sub: 'Floral frutado', conc: 'Eau de Toilette', ocasiao: 'Dia a dia, escola e passeios',
+      piramide: ['Limão · Lima', 'Maçã verde · Praliné · Peônia', 'Madeira de macieira · Almíscar · Cedro'],
+      desc: ['Nina, da Nina Ricci, vem no famoso frasco em forma de maçã vermelha: cítricos frescos, maçã crocante e um toque de praliné, sobre almíscar e cedro.',
+        'Romântico e divertido, é um clássico para meninas que estão descobrindo o mundo dos perfumes.'] },
+    62: { sub: 'Floral frutado fresco', conc: 'Eau de Parfum', ocasiao: 'Dia, calor e escola',
+      piramide: ['Maçã verde · Pepino · Toranja', 'Magnólia · Violeta · Rosa · Lírio-do-vale', 'Sândalo · Âmbar · Almíscar'],
+      desc: ['Be Delicious, da DKNY, é a maçã verde mais famosa da perfumaria: fresco e crocante, com pepino e toranja, flores leves e um fundo suave de sândalo.',
+        'Limpo e cheio de energia, é ótimo para o dia e para o calor.'] },
+    63: { sub: 'Floral almiscarado', conc: 'Desodorante Colônia', ocasiao: 'Dia a dia e escola',
+      piramide: ['Gerânio · Bergamota · Lima-da-pérsia · Rosa chá', 'Plumélia · Muguet · Gardênia', 'Sândalo · Cedro · Vetiver · Musk'],
+      desc: ['Floratta Blue, de O Boticário, é um floral almiscarado leve: bergamota e lima-da-pérsia na saída, flores brancas no coração e um fundo de musk que lembra roupa limpa.',
+        'Suave e delicado, é uma ótima escolha para o primeiro perfume.'] },
+    64: { sub: 'Fougère fresco', conc: 'Desodorante Colônia', ocasiao: 'Dia a dia, escola e esporte',
+      piramide: ['Bergamota · Limão · Mandarina', 'Estragão · Lavanda · Sálvia · Gálbano', 'Madeiras'],
+      desc: ['Quasar Classic, de O Boticário, é um masculino fresco e aromático: cítricos na saída, lavanda e sálvia no coração e um fundo amadeirado.',
+        'Leve e versátil, é um dos favoritos dos meninos para o dia a dia.'] },
+    65: { sub: 'Aromático aquático', conc: 'Desodorante Colônia', ocasiao: 'Dia, calor e esporte',
+      piramide: ['Bergamota · Mandarina · Agulhas de pinho', 'Notas aquáticas · Muguet · Madeiras transparentes', 'Musk · Musgo de carvalho · Sândalo'],
+      desc: ['Kaiak, da Natura, é o clássico aquático brasileiro: mandarina e bergamota bem frescas, um coração que lembra água e um fundo leve de sândalo.',
+        'Refrescante e de intensidade moderada, é perfeito para o calor e para quem prefere perfumes discretos.'] }
   };
 
   Object.entries(fichas).forEach(([id, f]) => {

@@ -88,8 +88,8 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Nova coleção Teen, ainda sem perfumes: mostra convite para pedir sugestões no WhatsApp.
 - Código separado em `js/produtos.js` (dados), `js/base.js` (comum), `js/loja.js` (home), `js/catalogo.js`, `js/perfume.js`; estilos novos em `css/paginas.css`. Ícone da aba em `assets/icone.svg`. Fundo da maré recomprimido (567 KB para 289 KB).
 - Pirâmides completas conferidas nas fontes oficiais (Natura: Homem Sagaz e Homem Cor.agio; O Boticário: The Blend, Clash, Malbec Magnetic) e em fichas de lojas que concordam entre si (Club 6 Intenso, Club 6 Exclusive, Impression In Black, Stella Dustin Homme Sport). Todos os 58 perfumes têm notas.
+- Coleção Teen montada com 7 perfumes de notas conferidas: Thank U, Next e Ari (Ariana Grande), Nina (Nina Ricci), Be Delicious (DKNY), Floratta Blue e Quasar Classic (O Boticário), Kaiak (Natura). Sem fotos ainda: aparecem com ilustração.
+- Confirmado com a loja: Stella Dustin Homme Sport é Eau de Parfum.
 - Confirmado com a loja: Botica 214 Verano en Firenze é a versão masculina (fougère aromático, Eau de Parfum).
 - A confirmar com a loja:
-  - quais perfumes entram na coleção Teen;
-  - concentração do Stella Dustin Homme Sport (uma loja indica Eau de Parfum);
   - horário de atendimento, se quiser mostrar.
