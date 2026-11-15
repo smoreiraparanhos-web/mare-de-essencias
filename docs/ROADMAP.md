@@ -87,9 +87,9 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Temas por coleção: masculino quente (couro, conhaque e âmbar), feminino rosé, teen vibrante (violeta e água-marinha), árabe dourado. Aplicados no catálogo, na ficha, nas abas da home e na nova seção "Compre por coleção".
 - Nova coleção Teen, ainda sem perfumes: mostra convite para pedir sugestões no WhatsApp.
 - Código separado em `js/produtos.js` (dados), `js/base.js` (comum), `js/loja.js` (home), `js/catalogo.js`, `js/perfume.js`; estilos novos em `css/paginas.css`. Ícone da aba em `assets/icone.svg`. Fundo da maré recomprimido (567 KB para 289 KB).
+- Pirâmides completas conferidas nas fontes oficiais (Natura: Homem Sagaz e Homem Cor.agio; O Boticário: The Blend, Clash, Malbec Magnetic) e em fichas de lojas que concordam entre si (Club 6 Intenso, Club 6 Exclusive, Impression In Black, Stella Dustin Homme Sport). Todos os 58 perfumes têm notas.
 - A confirmar com a loja:
   - quais perfumes entram na coleção Teen;
-  - notas dos nacionais, tiradas de fichas de varejo que divergem entre si (Homem Sagaz, Homem Cor.agio, Club 6 Intenso e Exclusive, Impression In Black, Malbec Magnetic, Clash);
   - Botica 214 Verano en Firenze: a loja vende a versão masculina (fougère, frasco escuro), como foi cadastrado?
-  - notas e concentração do Stella Dustin Homme Sport, que não foram encontradas;
+  - concentração do Stella Dustin Homme Sport (uma loja indica Eau de Parfum);
   - horário de atendimento, se quiser mostrar.
