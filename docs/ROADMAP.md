@@ -77,3 +77,19 @@ Protótipo visual navegável, filtros e seleção local temporária; não há ve
 - Com foto: Paradoxe, Homem Sagaz, Attar Al Wesal (Al Wataniah), Hawas for Him, Mercedes-Benz Select, Montblanc Individuel, Montblanc Starwalker, Nautica Voyage, Stella Dustin Homme Sport. Fotos de Phantom, Sauvage, Scandal, Sì e The Blend trocadas pelas versões originais.
 - Fotos quadradas aproximadas para o frasco ficar em destaque; fotos largas mostradas inteiras.
 - Arquivos enviados na raiz convertidos para `assets/produtos/` e retirados da raiz.
+
+## Edição 11: loja com WhatsApp, ficha do perfume e catálogo com filtros
+- Contato real: WhatsApp (51) 99626-3127, loja online em Eldorado do Sul (RS), sem loja física. Botão flutuante, ícone no cabeçalho, rodapé com contato e "Consultar" em cada cartão com mensagem pronta.
+- Seleção de favoritos guardada no navegador entre páginas e enviada pelo WhatsApp como lista.
+- Nova página do perfume (`perfume.html?id=`), inspirada na estrutura de página de produto: foto, marca, concentração, subfamília, notas principais, "Preço sob consulta", consulta pelo WhatsApp, atributos (coleção, família, subfamília, concentração, ocasião, marca), descrição, pirâmide olfativa, como usar, como comprar e "você também pode gostar".
+- Novo catálogo (`catalogo.html`), inspirado na estrutura de listagem: faixa da coleção, famílias em botões, filtros laterais (família, marca, concentração, ocasião) com contagem, busca, ordenação e filtros no endereço. No celular, os filtros abrem em painel lateral. A home continua sem o catálogo completo.
+- Fichas completas dos 58 perfumes em `js/produtos.js` (único arquivo a editar para o catálogo). Sem preço, estoque ou avaliações.
+- Temas por coleção: masculino quente (couro, conhaque e âmbar), feminino rosé, teen vibrante (violeta e água-marinha), árabe dourado. Aplicados no catálogo, na ficha, nas abas da home e na nova seção "Compre por coleção".
+- Nova coleção Teen, ainda sem perfumes: mostra convite para pedir sugestões no WhatsApp.
+- Código separado em `js/produtos.js` (dados), `js/base.js` (comum), `js/loja.js` (home), `js/catalogo.js`, `js/perfume.js`; estilos novos em `css/paginas.css`. Ícone da aba em `assets/icone.svg`. Fundo da maré recomprimido (567 KB para 289 KB).
+- A confirmar com a loja:
+  - quais perfumes entram na coleção Teen;
+  - notas dos nacionais, tiradas de fichas de varejo que divergem entre si (Homem Sagaz, Homem Cor.agio, Club 6 Intenso e Exclusive, Impression In Black, Malbec Magnetic, Clash);
+  - Botica 214 Verano en Firenze: a loja vende a versão masculina (fougère, frasco escuro), como foi cadastrado?
+  - notas e concentração do Stella Dustin Homme Sport, que não foram encontradas;
+  - horário de atendimento, se quiser mostrar.
